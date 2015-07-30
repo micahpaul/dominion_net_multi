@@ -1,0 +1,16 @@
+﻿<myTypes:LogSection x:Class="Dominion.NET_WPF.Controls.GameLog.ucGameMessage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:myTypes="clr-namespace:Dominion.NET_WPF.Controls.GameLog"
+             mc:Ignorable="d" Background="WhiteSmoke" BorderThickness="1,2,1,1" BorderBrush="Black">
+    <myTypes:LogSection.Resources>
+        <ResourceDictionary Source="../../Resources/CustomStyles.xaml"/>
+    </myTypes:LogSection.Resources>
+    <Expander Name="expTurn" Header="Game Event" Style="{StaticResource PlusMinusExpander}" IsExpanded="True">
+        <StackPanel Name="spArea" Orientation="Vertical" HorizontalAlignment="Stretch">
+
+        </StackPanel>
+    </Expander>
+</myTypes:LogSection>

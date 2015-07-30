@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9B25813-2522-46E7-BE2F-674F6EEBB643}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dominion.NET_WPF</RootNamespace>
+    <AssemblyName>Dominion .NET WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Dominion.NET.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release %28x86%29|AnyCPU'">
+    <OutputPath>bin\Release %28x86%29\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Dominion .NET WPF.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GongSolutions.Wpf.DragDrop">
+      <HintPath>Resources\GongSolutions.Wpf.DragDrop.dll</HintPath>
+    </Reference>
+    <Reference Include="GrayscaleEffect">
+      <HintPath>Resources\GrayscaleEffect.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Resources\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ookii.Dialogs.Wpf, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0c15020868fd6249, processorArchitecture=MSIL">
+      <HintPath>Resources\Ookii.Dialogs.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Caching\BrushRepository.cs" />
+    <Compile Include="Controls\CardStackControl.xaml.cs">
+      <DependentUpon>CardStackControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucToggleButton.xaml.cs">
+      <DependentUpon>ucToggleButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucButton.xaml.cs">
+      <DependentUpon>ucButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucCardConstraint.xaml.cs">
+      <DependentUpon>ucCardConstraint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucCardConstraints.xaml.cs">
+      <DependentUpon>ucCardConstraints.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucCardIcon.xaml.cs">
+      <DependentUpon>ucCardIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucCardSettings.xaml.cs">
+      <DependentUpon>ucCardSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucICardCheckBox.xaml.cs">
+      <DependentUpon>ucICardCheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucICardIcon.xaml.cs">
+      <DependentUpon>ucICardIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GameLog\LogSection.cs" />
+    <Compile Include="Controls\GameLog\ucGameMessage.xaml.cs">
+      <DependentUpon>ucGameMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GameLog\ucGameTurn.xaml.cs">
+      <DependentUpon>ucGameTurn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GameLog\ucPlayerTurn.xaml.cs">
+      <DependentUpon>ucPlayerTurn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucChooser.xaml.cs">
+      <DependentUpon>ucChooser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucGameLog.xaml.cs">
+      <DependentUpon>ucGameLog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucICardButton.xaml.cs">
+      <DependentUpon>ucICardButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucKineticScroller.xaml.cs">
+      <DependentUpon>ucKineticScroller.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucObjectList.xaml.cs">
+      <DependentUpon>ucObjectList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucPlayerDisplay.xaml.cs">
+      <DependentUpon>ucPlayerDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucPlayerOverview.xaml.cs">
+      <DependentUpon>ucPlayerOverview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucPlayerSettings.xaml.cs">
+      <DependentUpon>ucPlayerSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucSmallColorPicker.xaml.cs">
+      <DependentUpon>ucSmallColorPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucTokenIcon.xaml.cs">
+      <DependentUpon>ucTokenIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\CardToBrushConverter.cs" />
+    <Compile Include="Converters\ConstraintTypeConverter.cs" />
+    <Compile Include="Converters\IntConverter.cs" />
+    <Compile Include="Caching\DropShadowRepository.cs" />
+    <Compile Include="KineticBehavior.cs" />
+    <Compile Include="Templates\ObjectTemplateSelector.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Statistics.cs" />
+    <Compile Include="ToolTipCard.xaml.cs">
+      <DependentUpon>ToolTipCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
+    <Compile Include="ViewModel\AIListViewModel.cs" />
+    <Compile Include="ViewModel\AIViewModel.cs" />
+    <Compile Include="ViewModel\CardListViewModel.cs" />
+    <Compile Include="ViewModel\CardViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="wCardSelection.xaml.cs">
+      <DependentUpon>wCardSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wCardViewer.xaml.cs">
+      <DependentUpon>wCardViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wMessageBox.xaml.cs">
+      <DependentUpon>wMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wSettings.xaml.cs">
+      <DependentUpon>wSettings.xaml</DependentUpon>
+    </Compile>
+    <Resource Include="Resources\CustomStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Page Include="Controls\CardCollectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CardStackControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ucButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucCardConstraint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucCardConstraints.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucCardIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucCardSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucICardCheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ucICardIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\GameLog\ucGameMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\GameLog\ucGameTurn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\GameLog\ucPlayerTurn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucChooser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucGameLog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucICardButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucKineticScroller.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucObjectList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucPlayerDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucPlayerOverview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucPlayerSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucSmallColorPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ucTokenIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="Resources\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="Controls\SupplyControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ToolTipCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wCardSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wCardViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wMain.xaml.cs">
+      <DependentUpon>wMain.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="wMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\CardCollectionControl.xaml.cs">
+      <DependentUpon>CardCollectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Caching\ImageRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Controls\SupplyControl.xaml.cs">
+      <DependentUpon>SupplyControl.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DominionBase\DominionBase.csproj">
+      <Project>{03CB5DE5-2775-4296-9EB3-751EFBEC1B3C}</Project>
+      <Name>DominionBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dominion.NET.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\computer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\user.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bullet_get.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="version.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\delete.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\closed.png" />
+    <Resource Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\closed_plasticwrap.png" />
+    <Resource Include="Resources\open_plasticwrap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\card_array.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\disk.png" />
+    <Resource Include="Resources\folder.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+  <Target Name="BeforeBuild">
+    <PropertyGroup>
+      <MyProgramFiles>$(ProgramW6432)</MyProgramFiles>
+      <MyProgramFiles Condition="$(MyProgramFiles) == ''">$(ProgramFiles)</MyProgramFiles>
+    </PropertyGroup>
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)" Condition="Exists('$(MyProgramFiles)\TortoiseSVN\bin\svn.exe')" ToolPath="$(MyProgramFiles)\TortoiseSVN\bin">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)" Condition="Exists('$(MyProgramFiles)\VisualSVN\bin\svn.exe')" ToolPath="$(MyProgramFiles)\VisualSVN\bin">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)" Condition="Exists('$(MyProgramFiles)\..\Program Files\SlikSvn\bin\svn.exe')" ToolPath="$(MyProgramFiles)\..\Program Files\SlikSvn\bin">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)" Condition="Exists('$(ProgramFiles)\TortoiseSVN\bin\svn.exe')" ToolPath="$(ProgramFiles)\TortoiseSVN\bin">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)" Condition="Exists('$(ProgramFiles)\VisualSVN\bin\svn.exe')" ToolPath="$(ProgramFiles)\VisualSVN\bin">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)" Condition="Exists('$(ProgramFiles)\..\Program Files\SlikSvn\bin\svn.exe')" ToolPath="$(ProgramFiles)\..\Program Files\SlikSvn\bin">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+    <FileUpdate Files="Properties\AssemblyInfo.cs" Regex="(\d+)\.(\d+)\.(\d*|\*)\.(\d+|\*)" ReplacementText="$1.$2.$(Revision).$4" />
+    <FileUpdate Files="version.xml" Regex="(\d+)\.(\d+)\.(\d*|\*)\.(\d+|\*)" ReplacementText="$1.$2.$(Revision).$4" />
+  </Target>
+</Project>

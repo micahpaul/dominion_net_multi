@@ -1,0 +1,5 @@
+C:\dominion_net\trunk\DominionBase\bin\Debug\DominionBase.dll
+C:\dominion_net\trunk\DominionBase\bin\Debug\DominionBase.pdb
+C:\dominion_net\trunk\DominionBase\obj\Debug\DominionBase.dll
+C:\dominion_net\trunk\DominionBase\obj\Debug\DominionBase.pdb
+C:\dominion_net\trunk\DominionBase\obj\Debug\DominionBase.csprojResolveAssemblyReference.cache

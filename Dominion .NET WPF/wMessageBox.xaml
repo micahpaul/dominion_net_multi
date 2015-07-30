@@ -1,0 +1,18 @@
+﻿<Window x:Class="Dominion.NET_WPF.wMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ctrl="clr-namespace:Dominion.NET_WPF.Controls"
+        Title="wMessageBox" Height="150" Width="350" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterOwner" WindowStyle="ThreeDBorderWindow">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
+            <ctrl:ucButton Text="_Cancel" HorizontalAlignment="Right" x:Name="bCancel" VerticalAlignment="Bottom" Width="75" IsCancel="True" Click="bCancel_Click" DockPanel.Dock="Right" Margin="3" TextPadding="2" />
+            <ctrl:ucButton Text="_No" HorizontalAlignment="Right" x:Name="bNo" VerticalAlignment="Bottom" Width="75" Click="bNo_Click" DockPanel.Dock="Right" Margin="3" TextPadding="2" />
+            <ctrl:ucButton Text="_OK" HorizontalAlignment="Right" x:Name="bOk" VerticalAlignment="Bottom" Width="75" IsDefault="True" Click="bOk_Click" DockPanel.Dock="Right" Margin="3" TextPadding="2" />
+        </DockPanel>
+        <Image Name="iIcon" DockPanel.Dock="Left" Width="75" Stretch="None">
+            
+        </Image>
+        <TextBlock Name="tbBody" VerticalAlignment="Center" TextWrapping="WrapWithOverflow" Margin="10">
+        </TextBlock>
+    </DockPanel>
+</Window>

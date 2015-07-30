@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{03CB5DE5-2775-4296-9EB3-751EFBEC1B3C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DominionBase</RootNamespace>
+    <AssemblyName>DominionBase</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release %28x86%29|AnyCPU'">
+    <OutputPath>bin\Release %28x86%29\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\DominionBase.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cards\CardEnums.cs" />
+    <Compile Include="Cards\CardMovement.cs" />
+    <Compile Include="Cards\CardSettings.cs" />
+    <Compile Include="Cards\Sets\Alchemy.cs" />
+    <Compile Include="Cards\Sets\Base.cs" />
+    <Compile Include="Cards\Card.cs" />
+    <Compile Include="Cards\CardBenefit.cs" />
+    <Compile Include="Cards\CardCollection.cs" />
+    <Compile Include="Cards\Constraint.cs" />
+    <Compile Include="Cards\Sets\DarkAges.cs" />
+    <Compile Include="Cards\Sets\Cornucopia.cs" />
+    <Compile Include="Cards\Sets\Custom.cs" />
+    <Compile Include="Cards\Sets\Guilds.cs" />
+    <Compile Include="Cards\Sets\Hinterlands.cs" />
+    <Compile Include="Cards\Sets\Intrigue.cs" />
+    <Compile Include="Cards\Preset.cs" />
+    <Compile Include="Cards\Sets\Prosperity.cs" />
+    <Compile Include="Cards\Sets\Seaside.cs" />
+    <Compile Include="Cards\Sets\Promotional.cs" />
+    <Compile Include="Cards\Sets\Universal.cs" />
+    <Compile Include="Choice.cs" />
+    <Compile Include="Cards\Cost.cs" />
+    <Compile Include="Currencies\Coin.cs" />
+    <Compile Include="Currencies\CurrencyBase.cs" />
+    <Compile Include="Currencies\Potion.cs" />
+    <Compile Include="Currency.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GameSettings.cs" />
+    <Compile Include="ICard.cs" />
+    <Compile Include="Option.cs" />
+    <Compile Include="Piles\DeckCollection.cs" />
+    <Compile Include="Piles\IPile.cs" />
+    <Compile Include="Players\AI\AIState.cs" />
+    <Compile Include="Players\AI\Basic.cs" />
+    <Compile Include="Players\AI\BigMoney.cs" />
+    <Compile Include="Players\AI\BigMoneyAdvanced.cs" />
+    <Compile Include="Players\AI\IComputerAI.cs" />
+    <Compile Include="Players\AI\jatill.cs" />
+    <Compile Include="Players\AI\RandomAI.cs" />
+    <Compile Include="Players\AI\Rix.cs" />
+    <Compile Include="Players\AI\RixAttack.cs" />
+    <Compile Include="Players\AI\Standard.cs" />
+    <Compile Include="Players\PlayerCollection.cs" />
+    <Compile Include="SerializableDictionary.cs" />
+    <Compile Include="Utilities\Application.cs" />
+    <Compile Include="Utilities\Logging.cs" />
+    <Compile Include="Piles\CardMat.cs" />
+    <Compile Include="Players\EventArgs.cs" />
+    <Compile Include="Players\Human.cs" />
+    <Compile Include="Piles\Deck.cs" />
+    <Compile Include="Piles\Pile.cs" />
+    <Compile Include="Piles\Trash.cs" />
+    <Compile Include="Players\Player.cs" />
+    <Compile Include="Players\Phase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Piles\Supply.cs" />
+    <Compile Include="Utilities\Random.cs" />
+    <Compile Include="Table.cs" />
+    <Compile Include="Token.cs" />
+    <Compile Include="Turn.cs" />
+    <Compile Include="Utilities\String.cs" />
+    <Compile Include="Visual\VisualPlayer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+  <Target Name="BeforeBuild">
+    <PropertyGroup>
+      <MyProgramFiles>$(ProgramW6432)</MyProgramFiles>
+      <MyProgramFiles Condition="$(MyProgramFiles) == ''">$(ProgramFiles)</MyProgramFiles>
+    </PropertyGroup>
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)" Condition="Exists('$(MyProgramFiles)\TortoiseSVN\bin\svn.exe')" ToolPath="$(MyProgramFiles)\TortoiseSVN\bin">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)" Condition="Exists('$(MyProgramFiles)\VisualSVN\bin\svn.exe')" ToolPath="$(MyProgramFiles)\VisualSVN\bin">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)" Condition="Exists('$(MyProgramFiles)\..\Program Files\SlikSvn\bin\svn.exe')" ToolPath="$(MyProgramFiles)\..\Program Files\SlikSvn\bin">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)" Condition="Exists('$(ProgramFiles)\TortoiseSVN\bin\svn.exe')" ToolPath="$(ProgramFiles)\TortoiseSVN\bin">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)" Condition="Exists('$(ProgramFiles)\VisualSVN\bin\svn.exe')" ToolPath="$(ProgramFiles)\VisualSVN\bin">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)" Condition="Exists('$(ProgramFiles)\..\Program Files\SlikSvn\bin\svn.exe')" ToolPath="$(ProgramFiles)\..\Program Files\SlikSvn\bin">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+    <FileUpdate Files="Properties\AssemblyInfo.cs" Regex="(\d+)\.(\d+)\.(\d*|\*)\.(\d+|\*)" ReplacementText="$1.$2.$(Revision).$4" />
+  </Target>
+</Project>

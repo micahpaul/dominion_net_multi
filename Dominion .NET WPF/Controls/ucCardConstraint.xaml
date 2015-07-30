@@ -1,0 +1,140 @@
+﻿<UserControl x:Class="Dominion.NET_WPF.Controls.ucCardConstraint"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:Dominion.NET_WPF"
+             xmlns:ctrl="clr-namespace:Dominion.NET_WPF.Controls"
+             xmlns:conv="clr-namespace:Dominion.NET_WPF.Converters"
+             xmlns:dbc="clr-namespace:DominionBase.Cards;assembly=DominionBase"
+             mc:Ignorable="d" Name="This" d:DesignHeight="26" d:DesignWidth="400" IsVisibleChanged="This_IsVisibleChanged">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <local:DisplayObjects x:Key="DisplayObjects"/>
+            <BitmapImage x:Key="imDelete" UriSource="pack://application:,,,/Resources/delete.png" />
+            <conv:ConstraintTypeEnableConverter x:Key="ConstraintTypeEnableConverter"/>
+            <conv:IntRangeMinConverter x:Key="IntRangeMinConverter"/>
+            <conv:ShowToolTipConverter x:Key="ShowToolTipConverter"/>
+            <local:ConstraintConverter x:Key="constraintConverter"/>
+            <local:ConstraintTypeConverter x:Key="constraintTypeConverter"/>
+            <local:ConstraintTypeToolTipConverter x:Key="constraintTypeToolTipConverter"/>
+            <ObjectDataProvider x:Key="ConstraintTypes" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="dbc:ConstraintType" />
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <DockPanel Margin="2" LastChildFill="False" Name="Testing">
+        <TextBlock Name="tbFrom" Text="from" DockPanel.Dock="Left" VerticalAlignment="Center" Margin="4,0" IsEnabled="{Binding SelectedItem, ElementName=cbCriteria, Converter={StaticResource ConstraintTypeEnableConverter}}"/>
+        <ComboBox Name="cbMinimum" DockPanel.Dock="Left" SelectionChanged="cbMinimum_SelectionChanged" Background="{StaticResource ResourceKey=NormalBrush}" MinWidth="40" HorizontalContentAlignment="Right">
+            <ComboBox.Style>
+                <Style>
+                    <Setter Property="ComboBox.IsEnabled" Value="True"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=cbCriteria, Path=SelectedValue}">
+                            <DataTrigger.Value>Unknown</DataTrigger.Value>
+                            <Setter Property="ComboBox.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=cbCriteria, Path=SelectedValue}">
+                            <DataTrigger.Value>CardMustUse</DataTrigger.Value>
+                            <Setter Property="ComboBox.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=cbCriteria, Path=SelectedValue}">
+                            <DataTrigger.Value>CardDontUse</DataTrigger.Value>
+                            <Setter Property="ComboBox.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ComboBox.Style>
+        </ComboBox>
+        <TextBlock Name="tbTo" Text="to" DockPanel.Dock="Left" VerticalAlignment="Center" Margin="4,0" IsEnabled="{Binding SelectedItem, ElementName=cbCriteria, Converter={StaticResource ConstraintTypeEnableConverter}}"/>
+        <ComboBox Name="cbMaximum" DockPanel.Dock="Left" IsEnabled="{Binding SelectedItem, ElementName=cbCriteria, Converter={StaticResource ConstraintTypeEnableConverter}}" SelectionChanged="cbMaximum_SelectionChanged" Background="{StaticResource ResourceKey=NormalBrush}" MinWidth="40" HorizontalContentAlignment="Right">
+            <ComboBox.Style>
+                <Style>
+                    <Setter Property="ComboBox.IsEnabled" Value="True"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=cbCriteria, Path=SelectedItem}">
+                            <DataTrigger.Value>Unknown</DataTrigger.Value>
+                            <Setter Property="ComboBox.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=cbCriteria, Path=SelectedItem}">
+                            <DataTrigger.Value>CardMustUse</DataTrigger.Value>
+                            <Setter Property="ComboBox.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=cbCriteria, Path=SelectedItem}">
+                            <DataTrigger.Value>CardDontUse</DataTrigger.Value>
+                            <Setter Property="ComboBox.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ComboBox.Style>
+        </ComboBox>
+        <Button Name="bRemove" DockPanel.Dock="Right" Margin="4,0" ToolTip="Remove Constraint" Click="bRemove_Click" Background="{StaticResource ResourceKey=NormalBrush}">
+            <Image Source="{StaticResource ResourceKey=imDelete}" Stretch="None"></Image>
+        </Button>
+        <TextBlock Text="cards satisfying" DockPanel.Dock="Left" VerticalAlignment="Center" Margin="4,0">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=cbCriteria, Path=SelectedItem}">
+                            <DataTrigger.Value>NumberOfSets</DataTrigger.Value>
+                            <Setter Property="TextBlock.Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=cbCriteria, Path=SelectedItem}">
+                            <DataTrigger.Value>CardsPerSet</DataTrigger.Value>
+                            <Setter Property="TextBlock.Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <ComboBox Name="cbCriteria" DockPanel.Dock="Left" ItemsSource="{Binding Source={StaticResource ConstraintTypes}}"
+                  SelectionChanged="cbCriteria_SelectionChanged" Background="{StaticResource ResourceKey=NormalBrush}" MinWidth="40">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Converter={StaticResource constraintTypeConverter}}" ToolTip="{Binding Converter={StaticResource constraintTypeToolTipConverter}}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox Name="cbValue" DockPanel.Dock="Left" MinWidth="50" Margin="3,0,0,0" SelectionChanged="cbValue_SelectionChanged" PreviewMouseDown="cbValue_MouseDown" PreviewMouseUp="cbValue_MouseUp" Background="{StaticResource ResourceKey=NormalBrush}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Converter={StaticResource constraintConverter}}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+            <ComboBox.ToolTip>
+                <ToolTip Name="ttCard" Margin="0" Padding="0">
+                    <local:ToolTipCard x:Name="ttcCard" />
+                </ToolTip>
+            </ComboBox.ToolTip>
+            <ComboBox.Style>
+                <Style TargetType="{x:Type ComboBox}">
+                    <Setter Property="ItemsSource" Value="{x:Null}"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=cbCriteria, Path=SelectedItem}">
+                            <DataTrigger.Value>Unknown</DataTrigger.Value>
+                            <Setter Property="ComboBox.Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=cbCriteria, Path=SelectedItem}">
+                            <DataTrigger.Value>CardCostContainsPotion</DataTrigger.Value>
+                            <Setter Property="ComboBox.Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=cbCriteria, Path=SelectedItem}">
+                            <DataTrigger.Value>NumberOfSets</DataTrigger.Value>
+                            <Setter Property="ComboBox.Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=cbCriteria, Path=SelectedItem}">
+                            <DataTrigger.Value>CardsPerSet</DataTrigger.Value>
+                            <Setter Property="ComboBox.Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ComboBox.Style>
+        </ComboBox>
+    </DockPanel>
+</UserControl>

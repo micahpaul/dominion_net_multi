@@ -1,0 +1,79 @@
+C:\dominion_net\trunk\Dominion .NET WPF\bin\Debug\Dominion .NET WPF.exe.config
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Dominion .NET WPF.csprojResolveAssemblyReference.cache
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucToggleButton.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucButton.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucObjectList.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucPlayerOverview.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucTokenIcon.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\ToolTipCard.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\CardCollectionControl.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\CardStackControl.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucToggleButton.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucButton.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucCardConstraint.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucCardConstraints.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucCardIcon.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucCardSettings.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucICardCheckBox.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucICardIcon.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\GameLog\ucGameMessage.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\GameLog\ucGameTurn.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\GameLog\ucPlayerTurn.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucChooser.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucGameLog.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucICardButton.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucKineticScroller.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucObjectList.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucPlayerDisplay.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucPlayerOverview.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucPlayerSettings.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucSmallColorPicker.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucTokenIcon.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\SupplyControl.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\ToolTipCard.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\wCardSelection.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\wCardViewer.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\wMain.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\wMessageBox.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\wSettings.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\App.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Dominion .NET WPF_MarkupCompile.cache
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Dominion .NET WPF_MarkupCompile.lref
+C:\dominion_net\trunk\Dominion .NET WPF\bin\Debug\Dominion .NET WPF.exe
+C:\dominion_net\trunk\Dominion .NET WPF\bin\Debug\Dominion .NET WPF.pdb
+C:\dominion_net\trunk\Dominion .NET WPF\bin\Debug\DominionBase.dll
+C:\dominion_net\trunk\Dominion .NET WPF\bin\Debug\GongSolutions.Wpf.DragDrop.dll
+C:\dominion_net\trunk\Dominion .NET WPF\bin\Debug\GrayscaleEffect.dll
+C:\dominion_net\trunk\Dominion .NET WPF\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\dominion_net\trunk\Dominion .NET WPF\bin\Debug\Ookii.Dialogs.Wpf.dll
+C:\dominion_net\trunk\Dominion .NET WPF\bin\Debug\DominionBase.pdb
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\CardCollectionControl.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\CardStackControl.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucCardConstraint.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucCardConstraints.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucCardIcon.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucCardSettings.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucICardCheckBox.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucICardIcon.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\GameLog\ucGameMessage.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\GameLog\ucGameTurn.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\GameLog\ucPlayerTurn.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucChooser.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucGameLog.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucICardButton.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucKineticScroller.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucPlayerDisplay.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucPlayerSettings.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\ucSmallColorPicker.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Controls\SupplyControl.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\wCardSelection.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\wCardViewer.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\wMain.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\wMessageBox.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\wSettings.baml
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Dominion .NET WPF.g.resources
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Dominion.NET_WPF.Properties.Resources.resources
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Dominion .NET WPF.csproj.GenerateResource.Cache
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Dominion .NET WPF.exe
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Dominion .NET WPF.pdb

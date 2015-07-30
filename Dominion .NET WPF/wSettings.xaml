@@ -1,0 +1,533 @@
+﻿<Window x:Class="Dominion.NET_WPF.wSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:Dominion.NET_WPF"
+        xmlns:ctrl="clr-namespace:Dominion.NET_WPF.Controls"
+        xmlns:vm="clr-namespace:Dominion.NET_WPF.ViewModel"
+        xmlns:sa="clr-namespace:ScrollableArea"
+        xml:lang="en-US" Name="This"
+        Title="Settings" Height="520" Width="620" WindowStartupLocation="CenterOwner" ResizeMode="CanResizeWithGrip">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <ObjectDataProvider MethodName="GetValues"
+                        ObjectType="{x:Type sys:Enum}"
+                        x:Key="LayoutStyleValues">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="local:LayoutStyle" />
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+            <ObjectDataProvider MethodName="GetValues"
+                        ObjectType="{x:Type sys:Enum}"
+                        x:Key="GameLogLocationValues">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="local:GameLogLocation" />
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+            <local:PlayerDisplayConverter x:Key="PlayerDisplayConverter"/>
+            <local:ConstraintConverter x:Key="constraintConverter"/>
+            <local:AITypeConverterName x:Key="aiTypeConverterName"/>
+            <local:AITypeConverterDescription x:Key="aiTypeConverterDescription"/>
+            <local:ToolTipShowDurationConverter x:Key="ToolTipShowDurationConverter"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <DockPanel>
+        <DockPanel LastChildFill="False" DockPanel.Dock="Bottom">
+            <ctrl:ucButton Text="Cancel" HorizontalAlignment="Right" x:Name="bCancel" VerticalAlignment="Bottom" Width="75" IsCancel="True" DockPanel.Dock="Right" Margin="3,3,23,3" TextPadding="2" TabIndex="999" />
+            <ctrl:ucButton Text="OK" HorizontalAlignment="Right" x:Name="bOk" VerticalAlignment="Bottom" Width="75" IsDefault="True" Click="bOk_Click" DockPanel.Dock="Right" Margin="3" TextPadding="2" TabIndex="990" />
+        </DockPanel>
+        <TabControl Name="tabControl1" SelectionChanged="tabControl1_SelectionChanged">
+            <TabItem Header="Players" Name="tiPlayer" TabIndex="1">
+                <DockPanel>
+                    <GroupBox Header="Player Settings" DockPanel.Dock="Left">
+                        <DockPanel Name="dockPanel2">
+                            <StackPanel DockPanel.Dock="Top">
+                                <DockPanel>
+                                    <DockPanel Name="dockPanel1" Margin="6,3,6,3" DockPanel.Dock="Left">
+                                        <Slider Name="slidNumPlayers" Width="50" Minimum="1" Maximum="6" SmallChange="1" TickPlacement="BottomRight" ValueChanged="slidNumPlayers_ValueChanged" Interval="1" IsSnapToTickEnabled="True" AutoToolTipPlacement="BottomRight" TabIndex="10" />
+                                        <TextBlock Name="tbPlayersNum" HorizontalAlignment="Right" Text="2" Margin="5,0" />
+                                        <TextBlock Name="textBox1" Text="players" />
+                                    </DockPanel>
+                                    <DockPanel Name="dockPanel3" Margin="6,3,6,3" DockPanel.Dock="Left">
+                                        <Slider Name="slidHumanPlayers" Width="50" Minimum="0" Maximum="2" SmallChange="1" TickPlacement="BottomRight" Interval="1" IsSnapToTickEnabled="True" AutoToolTipPlacement="BottomRight" ValueChanged="slidHumanPlayers_ValueChanged" Value="2" TabIndex="15" />
+                                        <TextBlock Name="tbPlayersHuman" HorizontalAlignment="Right" Text="1" Margin="5,0" />
+                                        <TextBlock Name="textBox2" Text="human player" />
+                                    </DockPanel>
+                                </DockPanel>
+                            </StackPanel>
+                            <StackPanel Name="spPlayers" DockPanel.Dock="Top">
+                                <ctrl:ucPlayerSettings x:Name="ucPS1" PlayerNumber="1" KeyboardNavigation.TabNavigation="Local">
+                                    <ctrl:ucPlayerSettings.Style>
+                                        <Style TargetType="{x:Type ctrl:ucPlayerSettings}">
+                                            <Setter Property="IsEnabled" Value="False"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding ElementName=slidNumPlayers, Path=Value, Converter={StaticResource PlayerDisplayConverter}, ConverterParameter=1}">
+                                                    <DataTrigger.Value>True</DataTrigger.Value>
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ctrl:ucPlayerSettings.Style>
+                                </ctrl:ucPlayerSettings>
+                                <ctrl:ucPlayerSettings x:Name="ucPS2" PlayerNumber="2" KeyboardNavigation.TabNavigation="Local">
+                                    <ctrl:ucPlayerSettings.Style>
+                                        <Style TargetType="{x:Type ctrl:ucPlayerSettings}">
+                                            <Setter Property="IsEnabled" Value="False"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding ElementName=slidNumPlayers, Path=Value, Converter={StaticResource PlayerDisplayConverter}, ConverterParameter=2}">
+                                                    <DataTrigger.Value>True</DataTrigger.Value>
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ctrl:ucPlayerSettings.Style>
+                                </ctrl:ucPlayerSettings>
+                                <ctrl:ucPlayerSettings x:Name="ucPS3" PlayerNumber="3" KeyboardNavigation.TabNavigation="Local">
+                                    <ctrl:ucPlayerSettings.Style>
+                                        <Style TargetType="{x:Type ctrl:ucPlayerSettings}">
+                                            <Setter Property="IsEnabled" Value="False"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding ElementName=slidNumPlayers, Path=Value, Converter={StaticResource PlayerDisplayConverter}, ConverterParameter=3}">
+                                                    <DataTrigger.Value>True</DataTrigger.Value>
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ctrl:ucPlayerSettings.Style>
+                                </ctrl:ucPlayerSettings>
+                                <ctrl:ucPlayerSettings x:Name="ucPS4" PlayerNumber="4" KeyboardNavigation.TabNavigation="Local">
+                                    <ctrl:ucPlayerSettings.Style>
+                                        <Style TargetType="{x:Type ctrl:ucPlayerSettings}">
+                                            <Setter Property="IsEnabled" Value="False"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding ElementName=slidNumPlayers, Path=Value, Converter={StaticResource PlayerDisplayConverter}, ConverterParameter=4}">
+                                                    <DataTrigger.Value>True</DataTrigger.Value>
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ctrl:ucPlayerSettings.Style>
+                                </ctrl:ucPlayerSettings>
+                                <ctrl:ucPlayerSettings x:Name="ucPS5" PlayerNumber="5" KeyboardNavigation.TabNavigation="Local">
+                                    <ctrl:ucPlayerSettings.Style>
+                                        <Style TargetType="{x:Type ctrl:ucPlayerSettings}">
+                                            <Setter Property="IsEnabled" Value="False"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding ElementName=slidNumPlayers, Path=Value, Converter={StaticResource PlayerDisplayConverter}, ConverterParameter=5}">
+                                                    <DataTrigger.Value>True</DataTrigger.Value>
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ctrl:ucPlayerSettings.Style>
+                                </ctrl:ucPlayerSettings>
+                                <ctrl:ucPlayerSettings x:Name="ucPS6" PlayerNumber="6" KeyboardNavigation.TabNavigation="Local">
+                                    <ctrl:ucPlayerSettings.Style>
+                                        <Style TargetType="{x:Type ctrl:ucPlayerSettings}">
+                                            <Setter Property="IsEnabled" Value="False"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding ElementName=slidNumPlayers, Path=Value, Converter={StaticResource PlayerDisplayConverter}, ConverterParameter=6}">
+                                                    <DataTrigger.Value>True</DataTrigger.Value>
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ctrl:ucPlayerSettings.Style>
+                                </ctrl:ucPlayerSettings>
+                            </StackPanel>
+                            <GroupBox Header="Random AI Settings">
+                                <DockPanel LastChildFill="False">
+                                    <StackPanel DockPanel.Dock="Left">
+                                        <CheckBox Name="cbRandomUnique" Margin="3" IsChecked="{Binding Path=RandomAI_Unique}" TabIndex="60" ToolTip="If this checkbox is checked, then each AI checked in the &quot;Allowable AIs&quot; box will be selected at most once for a game">
+                                            <TextBlock Text="Use a different AI for each Random" TextWrapping="WrapWithOverflow" />
+                                        </CheckBox>
+                                    </StackPanel>
+                                    <ListBox Name="lbAISelection" DockPanel.Dock="Right" MinWidth="200" ToolTip="Only the AIs that are checked in this box will be used by the &quot;Random&quot; AI Strategy">
+                                        <ListBox.DataContext>
+                                            <vm:AIListViewModel/>
+                                        </ListBox.DataContext>
+                                        <ListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <CheckBox Name="cbRandomName" Margin="3,0" IsChecked="{Binding IsChecked}">
+                                                    <TextBlock Text="{Binding Path=AI, Converter={StaticResource aiTypeConverterName}}" ToolTip="{Binding Path=AI, Converter={StaticResource aiTypeConverterDescription}}"/>
+                                                </CheckBox>
+                                            </DataTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                    <TextBlock DockPanel.Dock="Right" Text="Allowable AIs" ToolTip="Only the AIs that are checked in this box will be used by the &quot;Random&quot; AI Strategy" Margin="12,3,3,0" TextAlignment="Right">
+                                        <TextBlock.LayoutTransform>
+                                            <RotateTransform Angle="-90"/>
+                                        </TextBlock.LayoutTransform>
+                                    </TextBlock>
+                                </DockPanel>
+                            </GroupBox>
+                        </DockPanel>
+                    </GroupBox>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="Automation" Name="tiAutomation" TabIndex="2">
+                <GroupBox Header="Automated action settings">
+                    <StackPanel>
+                        <CheckBox Name="cbChooser_AutomaticallyClickWhenSatisfied" Margin="3" IsChecked="{Binding Path=Chooser_AutomaticallyClickWhenSatisfied}" TabIndex="110">
+                            <TextBlock Text="Enable automatic clicking of Done button on Chooser window" TextWrapping="WrapWithOverflow" />
+                        </CheckBox>
+                        <CheckBox Name="cbNeverBuyCopperCurse" Margin="3" TabIndex="115" IsChecked="{Binding Path=NeverBuyCopperOrCurseExceptWhenGoonsIsInPlay}">
+                            <TextBlock Text="Don't offer to buy Copper, Curse, or Ruins except when Goons or Merchant Guild is in play" TextWrapping="WrapWithOverflow" />
+                        </CheckBox>
+                        <CheckBox Name="cbChooser_AutomaticallyRevealMoat" Margin="3" IsChecked="{Binding Path=Chooser_AutomaticallyRevealMoat}" TabIndex="120">
+                            <TextBlock Text="Automatically reveal Moat when attacked" TextWrapping="WrapWithOverflow" />
+                        </CheckBox>
+                        <CheckBox Name="cbChooser_AutomaticallyRevealProvince" Margin="3" IsChecked="{Binding Path=Chooser_AutomaticallyRevealProvince}" TabIndex="125">
+                            <TextBlock Text="Automatically reveal Province when Tournament is played" TextWrapping="WrapWithOverflow" />
+                        </CheckBox>
+                        <CheckBox Name="cbChooser_AutomaticallyMoveStashToTop" Margin="3" IsChecked="{Binding Path=Chooser_AutomaticallyMoveStashToTop}" TabIndex="125">
+                            <TextBlock Text="Automatically put Stashes at the top of the deck when shuffling" TextWrapping="WrapWithOverflow" />
+                        </CheckBox>
+                        <CheckBox Name="cbChooser_AutomaticallyPlayTreasures" Margin="3" IsChecked="{Binding Path=AutoPlayTreasures}" TabIndex="130">
+                            <TextBlock Text="Automatically play all Treasure cards" TextWrapping="WrapWithOverflow" />
+                        </CheckBox>
+                        <StackPanel Name="spAutoPlayTreasuresOptions">
+                            <CheckBox Name="cbChooser_AutomaticallyPlayTreasuresLoan" Margin="25,3,3,3" IsChecked="{Binding Path=AutoPlayTreasures_IncludingLoan}" TabIndex="135">
+                                <TextBlock Text="Including Loan" TextWrapping="WrapWithOverflow" />
+                            </CheckBox>
+                            <StackPanel Orientation="Horizontal" Name="spAutoPlayTreasuresLoanOptions">
+                                <TextBlock Text="Play:" Margin="50,3,3,3"/>
+                                <RadioButton Name="rbChooser_AutomaticallyPlayTreasuresLoanBeforeVenture" Margin="20,3,3,3" GroupName="LoanVenture" Checked="rbChooser_AutomaticallyPlayTreasuresLoanBeforeVenture_Checked" TabIndex="136">
+                                    <TextBlock Text="Loan before Venture" TextWrapping="WrapWithOverflow"/>
+                                </RadioButton>
+                                <RadioButton Name="rbChooser_AutomaticallyPlayTreasuresVentureBeforeLoan" Margin="20,3,3,3" GroupName="LoanVenture" Checked="rbChooser_AutomaticallyPlayTreasuresVentureBeforeLoan_Checked" TabIndex="137">
+                                    <TextBlock Text="Venture before Loan" TextWrapping="WrapWithOverflow"/>
+                                </RadioButton>
+                                <StackPanel.Style>
+                                    <Style TargetType="{x:Type StackPanel}">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=cbChooser_AutomaticallyPlayTreasuresLoan, Path=IsChecked}">
+                                                <DataTrigger.Value>True</DataTrigger.Value>
+                                                <Setter Property="IsEnabled" Value="True"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </StackPanel.Style>
+                            </StackPanel>
+                            <CheckBox Name="cbChooser_AutomaticallyPlayTreasuresHornOfPlenty" Margin="25,3,0,3" IsChecked="{Binding Path=AutoPlayTreasures_IncludingHornOfPlenty}" TabIndex="140">
+                                <TextBlock Text="Including Horn Of Plenty" TextWrapping="WrapWithOverflow" />
+                            </CheckBox>
+                            <StackPanel Orientation="Horizontal" Name="spAutoPlayTreasuresHornOfPlentyOptions">
+                                <TextBlock Text="Play:" Margin="50,3,3,3"/>
+                                <RadioButton Name="rbChooser_AutomaticallyPlayTreasuresHornOfPlentyBeforeBank" Margin="20,3,3,3" GroupName="HornOfPlentyBank" Checked="rbChooser_AutomaticallyPlayTreasuresHornOfPlentyBeforeBank_Checked" TabIndex="141">
+                                    <TextBlock Text="Horn Of Plenty before Bank" TextWrapping="WrapWithOverflow"/>
+                                </RadioButton>
+                                <RadioButton Name="rbChooser_AutomaticallyPlayTreasuresBankBeforeHornOfPlenty" Margin="20,3,3,3" GroupName="HornOfPlentyBank" Checked="rbChooser_AutomaticallyPlayTreasuresBankBeforeHornOfPlenty_Checked" TabIndex="142">
+                                    <TextBlock Text="Bank before Horn Of Plenty" TextWrapping="WrapWithOverflow"/>
+                                </RadioButton>
+                                <StackPanel.Style>
+                                    <Style TargetType="{x:Type StackPanel}">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=cbChooser_AutomaticallyPlayTreasuresHornOfPlenty, Path=IsChecked}">
+                                                <DataTrigger.Value>True</DataTrigger.Value>
+                                                <Setter Property="IsEnabled" Value="True"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </StackPanel.Style>
+                            </StackPanel>
+                            <StackPanel.Style>
+                                <Style TargetType="{x:Type StackPanel}">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=cbChooser_AutomaticallyPlayTreasures, Path=IsChecked}">
+                                            <DataTrigger.Value>True</DataTrigger.Value>
+                                            <Setter Property="IsEnabled" Value="True"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </StackPanel.Style>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+            </TabItem>
+            <TabItem Header="Interface" Name="tiUISettings" TabIndex="3">
+                <StackPanel>
+                    <GroupBox Header="Card ToolTip">
+                        <StackPanel>
+                            <DockPanel Name="dpToolTipDuration" Margin="3">
+                                <Slider Name="slidToolTipDuration" DockPanel.Dock="Left" Width="50" Minimum="1" Maximum="5" SmallChange="1" TickPlacement="BottomRight" Interval="1" IsSnapToTickEnabled="True" Margin="5,0" TabIndex="210" Value="{Binding Path=ToolTipShowDuration, Mode=TwoWay, Converter={StaticResource ToolTipShowDurationConverter}}" ValueChanged="slidToolTipDuration_ValueChanged" />
+                                <TextBlock Text="Display card ToolTip for"/>
+                                <TextBlock Name="tbToolTipDuration" Margin="5,0" />
+                                <TextBlock Text="seconds" />
+                                <TextBlock Name="tbToolTipExtra" Margin="5,0" />
+                                <DockPanel.Style>
+                                    <Style TargetType="{x:Type DockPanel}">
+                                        <Setter Property="IsEnabled" Value="True"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=cbToolTipClick, Path=IsChecked}">
+                                                <DataTrigger.Value>True</DataTrigger.Value>
+                                                <Setter Property="IsEnabled" Value="False"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DockPanel.Style>
+                            </DockPanel>
+                            <CheckBox Name="cbToolTipClick" Margin="3" Content="Show ToolTip on Right-Click" IsChecked="{Binding Path=ShowToolTipOnRightClick}" TabIndex="215" Checked="cbToolTipClick_Checked" />
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Layout">
+                        <StackPanel>
+                            <DockPanel>
+                                <TextBlock DockPanel.Dock="Left" Text="Supply layout style:" Margin="3" VerticalAlignment="Center" />
+                                <ComboBox Margin="3" Name="cbLayoutStyle" ItemsSource="{Binding Source={StaticResource LayoutStyleValues}}" TabIndex="220" HorizontalAlignment="Left" Background="{StaticResource ResourceKey=NormalBrush}" />
+                            </DockPanel>
+                            <DockPanel>
+                                <TextBlock DockPanel.Dock="Left" Text="Game Log location:" Margin="3" VerticalAlignment="Center" />
+                                <ComboBox Margin="3" Name="cbGameLogLocation" ItemsSource="{Binding Source={StaticResource GameLogLocationValues}}" TabIndex="221" HorizontalAlignment="Left" Background="{StaticResource ResourceKey=NormalBrush}" />
+                            </DockPanel>
+                            <CheckBox Name="cbDisplaySupplyNames" Margin="3" IsChecked="{Binding Path=DisplaySupplyPileNames}" TabIndex="225">
+                                <TextBlock Text="Show Kingdom Supply pile names" TextWrapping="WrapWithOverflow" />
+                            </CheckBox>
+                            <CheckBox Name="cbDisplayBasicSupplyNames" Margin="3" IsChecked="{Binding Path=DisplayBasicSupplyPileNames}" TabIndex="230">
+                                <TextBlock Text="Show Basic Supply pile names" TextWrapping="WrapWithOverflow" />
+                            </CheckBox>
+                        </StackPanel>
+                    </GroupBox>
+                    <CheckBox Name="cbPromptActions" Margin="3" IsChecked="{Binding Path=PromptUnplayedActions}" TabIndex="250">
+                        <TextBlock Text="Prompt when you have unplayed Actions remaining" TextWrapping="WrapWithOverflow" />
+                    </CheckBox>
+                    <CheckBox Name="cbPromptBuy" Margin="3" IsChecked="{Binding Path=PromptUnspentBuysTreasure}" TabIndex="255">
+                        <TextBlock Text="Prompt when you have unused coins &amp; buys left" TextWrapping="WrapWithOverflow" />
+                    </CheckBox>
+                    <CheckBox Name="cbPromptBuy_NoCrap" Margin="25,3,3,3" IsChecked="{Binding Path=PromptUnspentBuysTreasure_OnlyNotCopperCurseRuins}" TabIndex="255">
+                        <TextBlock Text="Only when there's something buyable other than Copper, Curse, or Ruins" TextWrapping="WrapWithOverflow" />
+                        <CheckBox.Style>
+                            <Style TargetType="{x:Type CheckBox}">
+                                <Setter Property="IsEnabled" Value="False"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=cbPromptBuy, Path=IsChecked}">
+                                        <DataTrigger.Value>True</DataTrigger.Value>
+                                        <Setter Property="IsEnabled" Value="True"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </CheckBox.Style>
+                    </CheckBox>
+                    <CheckBox Name="cbAutoCollapse" Margin="3" IsChecked="{Binding Path=AutoCollapseOldTurns}" TabIndex="260">
+                        <TextBlock Text="Automatically collapse old turns in the Game Log View" TextWrapping="WrapWithOverflow" />
+                    </CheckBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Custom Images" Name="tiCustomImages" TabIndex="4">
+                <StackPanel>
+                    <GroupBox Header="Custom Images">
+                        <StackPanel>
+                            <CheckBox Name="cbUseCustomImages" Margin="3" IsChecked="{Binding Path=UseCustomImages}" TabIndex="240">
+                                <TextBlock Text="Use custom card icons" TextWrapping="WrapWithOverflow" />
+                            </CheckBox>
+                            <StackPanel Name="spUseCustomImages" Margin="25,0,0,0">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" Content="Small card icons path:"/>
+                                    <Button DockPanel.Dock="Right" Content="..." Padding="3,0" Margin="3" Click="smallCardIconBrowse_Click" />
+                                    <TextBox Name="tbCustomImagesPathSmall" Text="{Binding Path=CustomImagesPathSmall, UpdateSourceTrigger=PropertyChanged}" TabIndex="242" Margin="3" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" Content="Medium card icons path:"/>
+                                    <Button DockPanel.Dock="Right" Content="..." Padding="3,0" Margin="3" Click="mediumCardIconBrowse_Click" />
+                                    <TextBox Name="tbCustomImagesPathMedium" Text="{Binding Path=CustomImagesPathMedium, UpdateSourceTrigger=PropertyChanged}" TabIndex="244" Margin="3" />
+                                </DockPanel>
+                                <StackPanel.Style>
+                                    <Style TargetType="{x:Type StackPanel}">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=cbUseCustomImages, Path=IsChecked}">
+                                                <DataTrigger.Value>True</DataTrigger.Value>
+                                                <Setter Property="IsEnabled" Value="True"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </StackPanel.Style>
+                            </StackPanel>
+                            <CheckBox Name="cbUseCustomToolTips" Margin="3" IsChecked="{Binding Path=UseCustomToolTips}" TabIndex="246" HorizontalContentAlignment="Stretch">
+                                <TextBlock Text="Use custom card ToolTips" TextWrapping="WrapWithOverflow" />
+                            </CheckBox>
+                            <StackPanel Name="spUseCustomToolTips" Margin="25,0,0,0">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" Content="Card ToolTip images path:"/>
+                                    <Button DockPanel.Dock="Right" Content="..." Padding="3,0" Margin="3" Click="cardToolTipBrowse_Click" />
+                                    <TextBox Name="tbCustomToolTipsPath" Text="{Binding Path=CustomToolTipsPath, UpdateSourceTrigger=PropertyChanged}" TabIndex="242" Margin="3" />
+                                </DockPanel>
+                                <StackPanel.Style>
+                                    <Style TargetType="{x:Type StackPanel}">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=cbUseCustomToolTips, Path=IsChecked}">
+                                                <DataTrigger.Value>True</DataTrigger.Value>
+                                                <Setter Property="IsEnabled" Value="True"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </StackPanel.Style>
+                            </StackPanel>
+                            <Label>
+                                <StackPanel>
+                                    <TextBlock TextWrapping="WrapWithOverflow">Each of the card icon images needs to be named the same as the name of the card, with any spaces and apostrophes removed.  Image extensions that are supported are .png &amp; .jpg (.png is checked for first).  Three special card icons are used.  The card back named "back", the Stash card backed named "back_red", and an icon overlay to indicate empty piles named "gone".  Any custom image not found will default to the image that comes with the game.</TextBlock>
+                                    <TextBlock TextWrapping="WrapWithOverflow">For example, the image for King's Court would be named "kingscourt.png".</TextBlock>
+                                    <Separator/>
+                                    <TextBlock TextWrapping="WrapWithOverflow">The small icon images used are 53x32 pixels and 96dpi</TextBlock>
+                                    <TextBlock TextWrapping="WrapWithOverflow">The medium icon images used are 120x72 pixels and 96dpi</TextBlock>
+                                    <TextBlock TextWrapping="WrapWithOverflow">The full-card ToolTip images will be scaled to fit into a 220x320 pixel area</TextBlock>
+                                </StackPanel>
+                            </Label>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Kingdom Card Setup" Name="tiKingdomCardSetup" TabIndex="5">
+                <DockPanel>
+                    <CheckBox DockPanel.Dock="Top" Name="cbIdenticalStartingHands" Margin="3" IsChecked="{Binding Path=IdenticalStartingHands}" TabIndex="310">
+                        <TextBlock Text="Start all players with identical hands" TextWrapping="WrapWithOverflow" />
+                    </CheckBox>
+                    <CheckBox DockPanel.Dock="Top" Name="cbAutomaticallyAcceptKingdomCards" Margin="3" TabIndex="311" IsChecked="{Binding Path=AutomaticallyAcceptKingdomCards}">
+                        <TextBlock Text="Automatically accept randomized Kingdom cards without prompting" TextWrapping="WrapWithOverflow" />
+                    </CheckBox>
+                    <CheckBox DockPanel.Dock="Top" Name="cbForceColonyPlatinum" Margin="3" TabIndex="312" IsChecked="{Binding Path=ForceColonyPlatinum}">
+                        <TextBlock Text="Force usage of Colony / Platinum in all games" TextWrapping="WrapWithOverflow" />
+                    </CheckBox>
+                    <CheckBox DockPanel.Dock="Top" Name="cbForceShelters" Margin="3" TabIndex="313" IsChecked="{Binding Path=ForceShelters}">
+                        <TextBlock Text="Force usage of Shelters in all games" TextWrapping="WrapWithOverflow" />
+                    </CheckBox>
+                    <GroupBox Header="Preset kingdom card setups" DockPanel.Dock="Top" ToolTip="Lists available preset kingdom card setups to use.&#xa;Presets can be modified in the presets.txt file found in the executable directory.">
+                        <DockPanel>
+                            <CheckBox Name="cbUsePreset" Margin="3" VerticalAlignment="Center" Checked="cbUsePreset_Checked" Unchecked="cbUsePreset_Checked" DockPanel.Dock="Top" TabIndex="315">
+                                <TextBlock Text="Use selected preset" TextWrapping="WrapWithOverflow" />
+                            </CheckBox>
+                            <ctrl:ucObjectList x:Name="olCardsUsed" DockPanel.Dock="Bottom" Visibility="Collapsed" />
+                            <TextBlock DockPanel.Dock="Left" Text="Select Preset:" Margin="3" VerticalAlignment="Center" />
+                            <CheckBox DockPanel.Dock="Right" Name="cbShowPresetCards" Margin="3" VerticalAlignment="Center" Checked="cbShowPresetCards_Checked" Unchecked="cbShowPresetCards_Checked" TabIndex="320">
+                                <TextBlock Text="Show preset cards" TextWrapping="WrapWithOverflow" />
+                            </CheckBox>
+                            <ComboBox Margin="3" Name="cbPresets" SelectionChanged="cbPresets_SelectionChanged" TabIndex="315" Background="{StaticResource ResourceKey=NormalBrush}" />
+                        </DockPanel>
+                    </GroupBox>
+                    <GroupBox Name="gbCardConstraints" Header="Card choice constraints" DockPanel.Dock="Top" ToolTipService.ShowOnDisabled="True">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <ctrl:ucCardConstraints x:Name="ucccConstraints" />
+                        </ScrollViewer>
+                    </GroupBox>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="Card Settings" Name="tiCardSettings" TabIndex="6">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <ItemsControl Name="icCardSettings" IsTabStop="False" />
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Set &amp; Group Info" Name="tiSetGroupInformation" TabIndex="7">
+                <DockPanel>
+                    <DockPanel DockPanel.Dock="Top" LastChildFill="False" ToolTip="Lists all cards that are in a given Set, Type, or Group.&#xa;A &quot;Set&quot; is defined as a released set (e.g. Seaside) of cards or a collection of cards (e.g. Promotional).&#xa;A &quot;Type&quot; is defined as the type(s) listed at the bottom of the card, such as &quot;Treasure&quot; or &quot;Duration&quot;.&#xa;A &quot;Group&quot; is a classification system that one or more cards fits into, such as &quot;Cards that add Actions&quot;">
+                        <DockPanel DockPanel.Dock="Top" LastChildFill="False">
+                            <TextBlock DockPanel.Dock="Left" Text="Select Set:" Margin="3" VerticalAlignment="Center" />
+                            <ComboBox Margin="3" Name="cbSet" MinWidth="50" SelectionChanged="cbSet_SelectionChanged" TabIndex="410" Background="{StaticResource ResourceKey=NormalBrush}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Converter={StaticResource constraintConverter}}"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                            <TextBlock DockPanel.Dock="Left" Text="or Type:" Margin="8,3,3,3" VerticalAlignment="Center" />
+                            <ComboBox Margin="3" Name="cbCategory" MinWidth="50" SelectionChanged="cbCategory_SelectionChanged" TabIndex="415" Background="{StaticResource ResourceKey=NormalBrush}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Converter={StaticResource constraintConverter}}"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                            <TextBlock DockPanel.Dock="Left" Text="or Group:" Margin="8,3,3,3" VerticalAlignment="Center" />
+                            <ComboBox Margin="3" Name="cbGroup" MinWidth="50" SelectionChanged="cbGroup_SelectionChanged" TabIndex="420" Background="{StaticResource ResourceKey=NormalBrush}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Converter={StaticResource constraintConverter}}"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                            <CheckBox DockPanel.Dock="Left" Name="cbFullCardView" Margin="3" TabIndex="430" Checked="cbFullCardView_Checked" Unchecked="cbFullCardView_Checked" VerticalAlignment="Center">
+                                <TextBlock Text="Full card view" TextWrapping="WrapWithOverflow" />
+                            </CheckBox>
+                        </DockPanel>
+                    </DockPanel>
+                    <GroupBox Name="gbSetCategoryGroupDisplay"  Header="Cards">
+                        <DockPanel>
+                            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                                <TextBlock Name="tbMatchingCount" DockPanel.Dock="Top" Text="0" FontWeight="Bold" FontSize="16"/>
+                                <TextBlock FontWeight="Bold" FontSize="16" Text=" matching"/>
+                            </StackPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Grid Width="6" Height="6" Background="LightCyan" DockPanel.Dock="Left">
+                                    <Border Height="4" Width="4" BorderBrush="DeepSkyBlue" BorderThickness="1" Background="DarkBlue" Margin="1,0,0,0" HorizontalAlignment="Left" />
+                                </Grid>
+                                <Grid Height="6" Background="LightCyan">
+                                    <Border Name="bSetCategoryGroupDisplayHorizontal" Height="4" Width="55" BorderBrush="DeepSkyBlue" BorderThickness="0,1" Background="DarkBlue" Margin="0,0,0,0" HorizontalAlignment="Left" />
+                                </Grid>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Left">
+                                <Grid Width="6" Background="LightCyan" MouseLeftButtonDown="Grid_MouseLeftButtonDown" MouseLeftButtonUp="Grid_MouseLeftButtonUp" MouseMove="Grid_MouseMove">
+                                    <Border Name="bSetCategoryGroupDisplayVertical" Width="4" Height="44" BorderBrush="DeepSkyBlue" BorderThickness="1,0" Background="DarkBlue" Margin="0,0,0,0" VerticalAlignment="top" />
+                                </Grid>
+                            </DockPanel>
+                            <Grid>
+                                <ScrollViewer Name="svSetCategoryGroupDisplay" HorizontalScrollBarVisibility="Disabled"  VerticalScrollBarVisibility="Hidden" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="Black" FontFamily="Trebuchet MS" sa:KineticBehavior.HandleKineticScrolling="True" sa:KineticBehavior.Friction="0.90" ScrollChanged="svSetCategoryGroupDisplay_ScrollChanged">
+                                    <DockPanel LastChildFill="False">
+                                        <WrapPanel Name="wpSetCategoryGroupDisplay" Orientation="Horizontal" DockPanel.Dock="Top" >
+                                            <local:CardCollectionControl x:Name="cccSetCategoryGroupDisplay" PlayerMode="Waiting"  PileName=""  IsCardsVisible="True" IsDisplaySorted="True" CardSize="Text" ExactCount="False" VerticalAlignment="Top" IsTabStop="True" TabIndex="450" />
+                                        </WrapPanel>
+                                    </DockPanel>
+                                </ScrollViewer>
+                                <Border DockPanel.Dock="Top" Name="bOpacityLayerTop" IsHitTestVisible="False" Height="20" VerticalAlignment="Top" Visibility="Collapsed">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStopCollection>
+                                                <GradientStop Color="White" Offset="0"/>
+                                                <GradientStop Color="Transparent" Offset="1"/>
+                                            </GradientStopCollection>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                                <Border DockPanel.Dock="Left" Name="bOpacityLayerLeft" IsHitTestVisible="False" Width="20" HorizontalAlignment="Left" Visibility="Collapsed">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                            <GradientStopCollection>
+                                                <GradientStop Color="White" Offset="0"/>
+                                                <GradientStop Color="Transparent" Offset="1"/>
+                                            </GradientStopCollection>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                                <Border DockPanel.Dock="Right" Name="bOpacityLayerRight" IsHitTestVisible="False" Width="20" HorizontalAlignment="Right" Visibility="Collapsed">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
+                                            <GradientStopCollection>
+                                                <GradientStop Color="White" Offset="0"/>
+                                                <GradientStop Color="Transparent" Offset="1"/>
+                                            </GradientStopCollection>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                                <Border DockPanel.Dock="Bottom" Name="bOpacityLayerBottom" IsHitTestVisible="False" Height="20" VerticalAlignment="Bottom" Visibility="Collapsed">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                            <GradientStopCollection>
+                                                <GradientStop Color="White" Offset="0"/>
+                                                <GradientStop Color="Transparent" Offset="1"/>
+                                            </GradientStopCollection>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                            </Grid>
+                        </DockPanel>
+                    </GroupBox>
+                </DockPanel>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

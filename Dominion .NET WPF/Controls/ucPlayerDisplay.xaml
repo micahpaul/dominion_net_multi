@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="Dominion.NET_WPF.Controls.ucPlayerDisplay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:Dominion.NET_WPF"
+        xmlns:ctrl="clr-namespace:Dominion.NET_WPF.Controls"
+        xmlns:sa="clr-namespace:ScrollableArea"
+        ctrl:CardStackControl.CardStackControlClick="CardCollectionControl_CardCollectionControlClick" 
+        mc:Ignorable="d">
+    <Border CornerRadius="2" BorderThickness="2" BorderBrush="DeepSkyBlue">
+        <DockPanel>
+            <DockPanel DockPanel.Dock="Bottom">
+                <Border Name="bStuffDivider" Panel.ZIndex="1" BorderThickness="1" BorderBrush="DeepSkyBlue" DockPanel.Dock="Top" />
+                <DockPanel Name="dpStuff" LastChildFill="False" Background="Gainsboro">
+                    <Label Name="lStageText" Content="Stage:" FontFamily="Trebuchet MS" FontSize="16" FontWeight="Bold" DockPanel.Dock="Left" HorizontalContentAlignment="Right" Background="Silver" />
+                    <Label Name="lStage" DockPanel.Dock="Left" VerticalContentAlignment="Center" Padding="0,0,5,0" FontWeight="Bold" Background="Silver" />
+                    <Border Name="bVictoryPointsDivider" Panel.ZIndex="1" BorderThickness="1" BorderBrush="Black" DockPanel.Dock="Left" Visibility="Collapsed" />
+                    <Label Name="lVictoryPointsTitle" Content="Victory Points:" FontFamily="Trebuchet MS" FontSize="16" FontWeight="Bold" DockPanel.Dock="Left" HorizontalContentAlignment="Right" Background="LightGreen" Visibility="Collapsed" />
+                    <Label Name="lVictoryPoints" DockPanel.Dock="Left" VerticalContentAlignment="Center" Padding="0,0,5,0" FontWeight="Bold" Foreground="Black" Background="LightGreen" Visibility="Collapsed" />
+                </DockPanel>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Grid Width="6" Height="6" Background="LightCyan" DockPanel.Dock="Left">
+                    <Border Height="4" Width="4" BorderBrush="DeepSkyBlue" BorderThickness="1" Background="DarkBlue" Margin="1,0,0,0" HorizontalAlignment="Left" />
+                </Grid>
+                <Grid Height="6" Background="LightCyan" MouseLeftButtonDown="Grid_MouseLeftButtonDown_1" MouseMove="Grid_MouseMove_1" MouseLeftButtonUp="Grid_MouseLeftButtonUp">
+                    <Border Name="bHorizontal" Height="4" Width="55" BorderBrush="DeepSkyBlue" BorderThickness="0,1" Background="DarkBlue" Margin="0,0,0,0" HorizontalAlignment="Left" />
+                </Grid>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Left">
+                <Grid Width="6" Background="LightCyan" MouseLeftButtonDown="Grid_MouseLeftButtonDown" MouseLeftButtonUp="Grid_MouseLeftButtonUp" MouseMove="Grid_MouseMove">
+                    <Border Name="bVertical" Width="4" Height="44" BorderBrush="DeepSkyBlue" BorderThickness="1,0" Background="DarkBlue" Margin="0,0,0,0" VerticalAlignment="top"/>
+                </Grid>
+            </DockPanel>
+            <Grid>
+                <ScrollViewer x:Name="svPlayerDisplay" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="Black" sa:KineticBehavior.HandleKineticScrolling="True" sa:KineticBehavior.Friction="0.90" ScrollChanged="svPlayerDisplay_ScrollChanged">
+                    <DockPanel Name="dpPlayerDisplay" LastChildFill="False">
+                        <DockPanel LastChildFill="False" DockPanel.Dock="Top">
+                            <local:CardCollectionControl x:Name="cardDiscard" Height="Auto" Padding="0,0,0,0"  DockPanel.Dock="Left" />
+                            <Border Name="bDeckDiscardDivider" BorderThickness="2" BorderBrush="Black" DockPanel.Dock="Left" Visibility="Collapsed" />
+                            <local:CardCollectionControl x:Name="cardDeck" Height="Auto" Padding="0,0,0,0"  DockPanel.Dock="Left" />
+                            <Border Name="bDeckHandDivider" BorderThickness="2" BorderBrush="Black" DockPanel.Dock="Left" />
+                            <WrapPanel Name="wpHand" Orientation="Horizontal" DockPanel.Dock="Left" >
+                                <local:CardCollectionControl x:Name="cardHand" Height="Auto" Padding="0,0,0,0" />
+                            </WrapPanel>
+                        </DockPanel>
+                        <Border Name="bHandInPlayivider" Panel.ZIndex="1" BorderThickness="1" BorderBrush="Black" DockPanel.Dock="Top" />
+                        <DockPanel Name="dpInPlay" LastChildFill="False" DockPanel.Dock="Top">
+                            <local:CardCollectionControl x:Name="cardInPlay" Height="Auto" Padding="0,0,0,0"  DockPanel.Dock="Left" />
+                            <Border Name="bSetAsideDivider" BorderThickness="2" BorderBrush="Black" DockPanel.Dock="Left" Visibility="Collapsed" />
+                            <local:CardCollectionControl x:Name="cardSetAside" Height="Auto" Padding="0,0,0,0"  DockPanel.Dock="Left" Visibility="Collapsed" />
+                            <Border Name="bInPlayRevealedDivider" BorderThickness="2" BorderBrush="Black" DockPanel.Dock="Left" Visibility="Collapsed" />
+                            <local:CardCollectionControl x:Name="cardRevealed" Height="Auto" Padding="0,0,0,0"  DockPanel.Dock="Left" Visibility="Collapsed" />
+                            <Border Name="bRevealedLookingAtDivider" BorderThickness="2" BorderBrush="Black" DockPanel.Dock="Left" Visibility="Collapsed" />
+                            <local:CardCollectionControl x:Name="cardPrivate" Height="Auto" Padding="0,0,0,0"  DockPanel.Dock="Left" Visibility="Collapsed" />
+                        </DockPanel>
+                        <Border Name="bInPlayMatsDivider" Panel.ZIndex="1" BorderThickness="1" BorderBrush="Black" DockPanel.Dock="Top" />
+                        <DockPanel Name="dpMatsandPiles" LastChildFill="False" DockPanel.Dock="Top">
+                        </DockPanel>
+                    </DockPanel>
+                </ScrollViewer>
+                <Border DockPanel.Dock="Top" Name="bOpacityLayerTop" IsHitTestVisible="False" Height="20" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <GradientStopCollection>
+                                <GradientStop Color="White" Offset="0"/>
+                                <GradientStop Color="Transparent" Offset="1"/>
+                            </GradientStopCollection>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <Border DockPanel.Dock="Left" Name="bOpacityLayerLeft" IsHitTestVisible="False" Width="20" HorizontalAlignment="Left" Visibility="Collapsed">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStopCollection>
+                                <GradientStop Color="White" Offset="0"/>
+                                <GradientStop Color="Transparent" Offset="1"/>
+                            </GradientStopCollection>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <Border DockPanel.Dock="Right" Name="bOpacityLayerRight" IsHitTestVisible="False" Width="20" HorizontalAlignment="Right" Visibility="Collapsed">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
+                            <GradientStopCollection>
+                                <GradientStop Color="White" Offset="0"/>
+                                <GradientStop Color="Transparent" Offset="1"/>
+                            </GradientStopCollection>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <Border DockPanel.Dock="Bottom" Name="bOpacityLayerBottom" IsHitTestVisible="False" Height="20" VerticalAlignment="Bottom" Visibility="Collapsed">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                            <GradientStopCollection>
+                                <GradientStop Color="White" Offset="0"/>
+                                <GradientStop Color="Transparent" Offset="1"/>
+                            </GradientStopCollection>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+            </Grid>
+        </DockPanel>
+    </Border>
+</UserControl>

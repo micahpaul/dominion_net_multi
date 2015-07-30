@@ -1,0 +1,20 @@
+﻿Dominion .NET WPF
+
+
+winexe
+C#
+.cs
+C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\
+Dominion.NET_WPF
+none
+false
+DEBUG;TRACE
+C:\dominion_net\trunk\Dominion .NET WPF\App.xaml
+30-2066189343
+
+51-736153663
+19173936064
+Controls\CardCollectionControl.xaml;Controls\CardStackControl.xaml;Controls\ucToggleButton.xaml;Controls\ucButton.xaml;Controls\ucCardConstraint.xaml;Controls\ucCardConstraints.xaml;Controls\ucCardIcon.xaml;Controls\ucCardSettings.xaml;Controls\ucICardCheckBox.xaml;Controls\ucICardIcon.xaml;Controls\GameLog\ucGameMessage.xaml;Controls\GameLog\ucGameTurn.xaml;Controls\GameLog\ucPlayerTurn.xaml;Controls\ucChooser.xaml;Controls\ucGameLog.xaml;Controls\ucICardButton.xaml;Controls\ucKineticScroller.xaml;Controls\ucObjectList.xaml;Controls\ucPlayerDisplay.xaml;Controls\ucPlayerOverview.xaml;Controls\ucPlayerSettings.xaml;Controls\ucSmallColorPicker.xaml;Controls\ucTokenIcon.xaml;Controls\SupplyControl.xaml;ToolTipCard.xaml;wCardSelection.xaml;wCardViewer.xaml;wMain.xaml;wMessageBox.xaml;wSettings.xaml;
+
+False
+

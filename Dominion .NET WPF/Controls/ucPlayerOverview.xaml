@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Dominion.NET_WPF.Controls.ucPlayerOverview"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <BitmapImage x:Key="imHuman" UriSource="pack://application:,,,/Resources/user.png" />
+            <BitmapImage x:Key="imComputer" UriSource="pack://application:,,,/Resources/computer.png" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Player:" FontSize="16" FontWeight="Bold" />
+            <Image Name="iPlayerType" Margin="3" VerticalAlignment="Center"/>
+            <TextBlock Name="tbPlayerName" Margin="3" VerticalAlignment="Center" />
+            <TextBlock Margin="3,3,0,3" VerticalAlignment="Center">(</TextBlock>
+            <TextBlock Name="tbAIType" VerticalAlignment="Center" />
+            <TextBlock Margin="0,3,3,3" VerticalAlignment="Center">)</TextBlock>
+        </StackPanel>
+        <Label Name="lCardsPlayed" Content="Cards played last turn:"/>
+        <TextBlock Name="tbCardsPlayed" Margin="3"/>
+        <Label Name="lCardsBought" Content="Cards bought last turn:"/>
+        <TextBlock Name="tbCardsBought" Margin="3"/>
+        <Label Name="lCardsGained" Content="Extra cards gained during last turn:"/>
+        <TextBlock Name="tbCardsGained" Margin="3"/>
+        <Label Name="lCardsTrashed" Content="Cards trashed during last turn:"/>
+        <TextBlock Name="tbCardsTrashed" Margin="3"/>
+        <Label Name="lCardsGainedAfter" Content="Cards gained since last turn:"/>
+        <TextBlock Name="tbCardsGainedAfter" Margin="3"/>
+        <Label Name="lCardsTrashedAfter" Content="Cards trashed since last turn:"/>
+        <TextBlock Name="tbCardsTrashedAfter" Margin="3"/>
+    </StackPanel>
+</UserControl>

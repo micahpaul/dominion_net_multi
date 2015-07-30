@@ -1,0 +1,44 @@
+﻿<gameLog:LogSection x:Class="Dominion.NET_WPF.Controls.GameLog.ucGameTurn"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dominion.NET_WPF"
+             xmlns:gameLog="clr-namespace:Dominion.NET_WPF.Controls.GameLog"
+             mc:Ignorable="d" Background="Transparent" Padding="0" d:DesignWidth="79">
+    <gameLog:LogSection.Resources>
+        <ResourceDictionary Source="../../Resources/CustomStyles.xaml"/>
+    </gameLog:LogSection.Resources>
+    <Grid>
+        <Line Name="lEdge" X1="1" Y1="0" X2="1" Y2="1" Stretch="Fill" VerticalAlignment="Stretch" HorizontalAlignment="Left" StrokeThickness="3" Stroke="LimeGreen"/>
+        <Line Name="lTop" X1="0" Y1="1" X2="1" Y2="1" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Stretch" StrokeThickness="2">
+            <Shape.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="LimeGreen" Offset="0"/>
+                    <GradientStop Color="LimeGreen" Offset="0.25"/>
+                    <GradientStop Color="Transparent" Offset="1.25"/>
+                </LinearGradientBrush>
+            </Shape.Stroke>
+        </Line>
+        <Line Name="lBottom" X1="0" Y1="1" X2="1" Y2="1" Stretch="Fill" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" StrokeThickness="2">
+            <Shape.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="LimeGreen" Offset="0"/>
+                    <GradientStop Color="LimeGreen" Offset="0.25"/>
+                    <GradientStop Color="Transparent" Offset="1.25"/>
+                </LinearGradientBrush>
+            </Shape.Stroke>
+        </Line>
+        <Expander Margin="3,2,0,2" Name="expTurns" Header="Turn #0" Style="{StaticResource PlusMinusExpanderRight}" IsExpanded="True" Padding="0" BorderBrush="LimeGreen">
+            <StackPanel Name="spArea" Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0">
+            </StackPanel>
+        </Expander>
+    </Grid>
+    <!--<gameLog:LogSection.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Collapse _All" Click="miCollapseAll_Click"/>
+            <MenuItem Header="_Expand All" Click="miExpandAll_Click"/>
+            <MenuItem Header="Collapse _Game Turn" Click="miCollapseThis_Click"/>
+        </ContextMenu>
+    </gameLog:LogSection.ContextMenu>-->
+</gameLog:LogSection>

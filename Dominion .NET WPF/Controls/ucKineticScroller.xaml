@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Dominion.NET_WPF.Controls.ucKineticScroller"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sa="clr-namespace:ScrollableArea"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="400">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Top">
+            <Grid Width="6" Height="6" Background="LightCyan" DockPanel.Dock="Left">
+                <Border Height="4" Width="4" BorderBrush="DeepSkyBlue" BorderThickness="1" Background="DarkBlue" Margin="1,0,0,0" HorizontalAlignment="Left" />
+            </Grid>
+            <Grid Height="6" Background="LightCyan">
+                <Border Name="bItemsHorizontal" Height="4" Width="10" BorderBrush="DeepSkyBlue" BorderThickness="0,1" Background="DarkBlue" Margin="0,0,0,0" HorizontalAlignment="Left" />
+            </Grid>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Left">
+            <Grid Width="6" Background="LightCyan">
+                <Border Name="bItemsVertical" Width="4" Height="10" BorderBrush="DeepSkyBlue" BorderThickness="1,0" Background="DarkBlue" Margin="0,0,0,0" VerticalAlignment="top"/>
+            </Grid>
+        </DockPanel>
+        <ScrollViewer Name="svGame" HorizontalScrollBarVisibility="Disabled"  VerticalScrollBarVisibility="Hidden" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="Black" FontFamily="Trebuchet MS" sa:KineticBehavior.HandleKineticScrolling="True" sa:KineticBehavior.Friction="0.90" ScrollChanged="svScroller_ScrollChanged">
+            <DockPanel LastChildFill="False" Background="WhiteSmoke">
+                <WrapPanel Name="wpItems" Orientation="Horizontal" DockPanel.Dock="Top" >
+                </WrapPanel>
+            </DockPanel>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>

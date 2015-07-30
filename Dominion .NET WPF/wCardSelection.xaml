@@ -1,0 +1,103 @@
+﻿<Window x:Class="Dominion.NET_WPF.wCardSelection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Dominion.NET_WPF"
+        xmlns:ctrl="clr-namespace:Dominion.NET_WPF.Controls"
+        xmlns:sa="clr-namespace:ScrollableArea"
+        Title="Kingdom Card Randomizer" Height="425" Width="550" Loaded="Window_Loaded" WindowStyle="ToolWindow" ShowInTaskbar="True" WindowStartupLocation="CenterOwner" ResizeMode="CanResize">
+    <Border BorderThickness="1" BorderBrush="Black">
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
+                <CheckBox Name="cbAutoAccept" Margin="3" Content="Don't ask in the future" VerticalAlignment="Center" VerticalContentAlignment="Center" ToolTip="This setting can be changed on the Kingdom Card Setup tab in the Settings dialog"/>
+                <ctrl:ucButton x:Name="bAccept" Text="_Accept" Margin="3" TextPadding="10,5" IsDefault="True" Click="bAccept_Click" ToolTip="Accept these Kingdom cards and play with them" />
+                <ctrl:ucButton x:Name="bReshuffle" Text="_Reshuffle" Margin="3" TextPadding="10,5" Click="bReshuffle_Click" ToolTip="Re-randomize the Kingdom cards" />
+                <ctrl:ucButton x:Name="bCancel" Text="_Cancel" Margin="3" TextPadding="10,5" IsCancel="True" ToolTip="Cancel Kingdom card selection" />
+            </StackPanel>
+            <Border DockPanel.Dock="Top" BorderThickness="1" BorderBrush="Black">
+                <DockPanel>
+                    <DockPanel DockPanel.Dock="Top">
+                        <Grid Width="6" Height="6" Background="LightCyan" DockPanel.Dock="Left">
+                            <Border Height="4" Width="4" BorderBrush="DeepSkyBlue" BorderThickness="1" Background="DarkBlue" Margin="1,0,0,0" HorizontalAlignment="Left" />
+                        </Grid>
+                        <Grid Height="6" Background="LightCyan" MouseLeftButtonDown="Grid_MouseLeftButtonDown_1" MouseLeftButtonUp="Grid_MouseLeftButtonUp" MouseMove="Grid_MouseMove_1">
+                            <Border Name="bSetCategoryGroupDisplayHorizontal" Height="4" Width="55" BorderBrush="DeepSkyBlue" BorderThickness="0,1" Background="DarkBlue" Margin="0,0,0,0" HorizontalAlignment="Left" />
+                        </Grid>
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Left">
+                        <Grid Width="6" Background="LightCyan" MouseLeftButtonDown="Grid_MouseLeftButtonDown" MouseLeftButtonUp="Grid_MouseLeftButtonUp" MouseMove="Grid_MouseMove">
+                            <Border Name="bSetCategoryGroupDisplayVertical" Width="4" Height="44" BorderBrush="DeepSkyBlue" BorderThickness="1,0" Background="DarkBlue" Margin="0,0,0,0" VerticalAlignment="top"/>
+                        </Grid>
+                    </DockPanel>
+                    <Grid>
+                        <ScrollViewer Name="svSetCategoryGroupDisplay" HorizontalScrollBarVisibility="Disabled"  VerticalScrollBarVisibility="Hidden" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="Black" FontFamily="Trebuchet MS" sa:KineticBehavior.HandleKineticScrolling="True" sa:KineticBehavior.Friction="0.90" ScrollChanged="svSetCategoryGroupDisplay_ScrollChanged">
+                            <DockPanel Name="dpCards" LastChildFill="False">
+                                <WrapPanel Name="wpKingdomCards" Orientation="Horizontal" DockPanel.Dock="Top" >
+                                    <local:CardCollectionControl x:Name="cccKingdomCards" PlayerMode="Waiting"  PileName="Kingdom cards"  IsCardsVisible="True" IsDisplaySorted="True" CardSize="Small" ExactCount="False" VerticalAlignment="Top" IsTabStop="True" TabIndex="1" MinStackWidth="85" />
+                                </WrapPanel>
+                                <WrapPanel Name="wpGeneralCards" Orientation="Horizontal" DockPanel.Dock="Top" >
+                                    <local:CardCollectionControl x:Name="cccGeneralCards" PlayerMode="Waiting"  PileName="Additional cards"  IsCardsVisible="True" IsDisplaySorted="True" CardSize="Small" ExactCount="False" VerticalAlignment="Top" IsTabStop="True" TabIndex="2" MinStackWidth="85" />
+                                </WrapPanel>
+                                <DockPanel.Background>
+                                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                                        <GradientStop Color="White" Offset="0" />
+                                        <GradientStop x:Name="gsStop" Color="AliceBlue" Offset="0" />
+                                        <GradientStop Color="White" Offset="1" />
+                                    </LinearGradientBrush>
+                                </DockPanel.Background>
+                                <DockPanel.Triggers>
+                                    <EventTrigger RoutedEvent="Loaded">
+                                        <BeginStoryboard>
+                                            <Storyboard RepeatBehavior="Forever">
+                                                <DoubleAnimation Storyboard.TargetName="gsStop" Storyboard.TargetProperty="Offset" From="0" To="1" Duration="0:0:5" AutoReverse="True" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </DockPanel.Triggers>
+                            </DockPanel>
+                        </ScrollViewer>
+                        <Border DockPanel.Dock="Top" Name="bOpacityLayerTop" IsHitTestVisible="False" Height="20" VerticalAlignment="Top" Visibility="Collapsed">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <GradientStopCollection>
+                                        <GradientStop Color="White" Offset="0"/>
+                                        <GradientStop Color="Transparent" Offset="1"/>
+                                    </GradientStopCollection>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                        <Border DockPanel.Dock="Left" Name="bOpacityLayerLeft" IsHitTestVisible="False" Width="20" HorizontalAlignment="Left" Visibility="Collapsed">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                    <GradientStopCollection>
+                                        <GradientStop Color="White" Offset="0"/>
+                                        <GradientStop Color="Transparent" Offset="1"/>
+                                    </GradientStopCollection>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                        <Border DockPanel.Dock="Right" Name="bOpacityLayerRight" IsHitTestVisible="False" Width="20" HorizontalAlignment="Right" Visibility="Collapsed">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
+                                    <GradientStopCollection>
+                                        <GradientStop Color="White" Offset="0"/>
+                                        <GradientStop Color="Transparent" Offset="1"/>
+                                    </GradientStopCollection>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                        <Border DockPanel.Dock="Bottom" Name="bOpacityLayerBottom" IsHitTestVisible="False" Height="20" VerticalAlignment="Bottom" Visibility="Collapsed">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                    <GradientStopCollection>
+                                        <GradientStop Color="White" Offset="0"/>
+                                        <GradientStop Color="Transparent" Offset="1"/>
+                                    </GradientStopCollection>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Grid>
+                </DockPanel>
+            </Border>
+        </DockPanel>
+    </Border>
+</Window>

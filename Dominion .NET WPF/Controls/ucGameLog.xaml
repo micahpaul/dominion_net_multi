@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Dominion.NET_WPF.Controls.ucGameLog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:gl="clr-namespace:Dominion.NET_WPF.Controls.GameLog"
+             mc:Ignorable="d" x:Name="ucGameLogName" d:DesignHeight="223" d:DesignWidth="373">
+    <ScrollViewer Name="svArea" VerticalScrollBarVisibility="{Binding ElementName=ucGameLogName, Path=VerticalScrollBarVisibility}" 
+                  HorizontalScrollBarVisibility="{Binding ElementName=ucGameLogName, Path=HorizontalScrollBarVisibility}" Padding="0,0,0,5" CanContentScroll="True" VerticalContentAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+        <Grid>
+            <StackPanel Name="spArea" Orientation="Vertical" HorizontalAlignment="Stretch">
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+    <UserControl.ContextMenu>
+        <ContextMenu Opened="ContextMenu_Opened">
+            <MenuItem Name="miViewGameLog" Header="_View Game Log" Click="CurrentGame_ViewGameLog_Click" IsEnabled="True" />
+            <MenuItem Header="Collapse _All Turns" Click="miCollapseAll_Click"/>
+            <MenuItem Header="_Expand All Turns" Click="miExpandAll_Click"/>
+        </ContextMenu>
+        </UserControl.ContextMenu>
+</UserControl>

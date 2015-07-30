@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominion .NET WPF", "Dominion .NET WPF\Dominion .NET WPF.csproj", "{A9B25813-2522-46E7-BE2F-674F6EEBB643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DominionBase", "DominionBase\DominionBase.csproj", "{03CB5DE5-2775-4296-9EB3-751EFBEC1B3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release (x86)|Any CPU = Release (x86)|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9B25813-2522-46E7-BE2F-674F6EEBB643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9B25813-2522-46E7-BE2F-674F6EEBB643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9B25813-2522-46E7-BE2F-674F6EEBB643}.Release (x86)|Any CPU.ActiveCfg = Release (x86)|Any CPU
+		{A9B25813-2522-46E7-BE2F-674F6EEBB643}.Release (x86)|Any CPU.Build.0 = Release (x86)|Any CPU
+		{A9B25813-2522-46E7-BE2F-674F6EEBB643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9B25813-2522-46E7-BE2F-674F6EEBB643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03CB5DE5-2775-4296-9EB3-751EFBEC1B3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03CB5DE5-2775-4296-9EB3-751EFBEC1B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03CB5DE5-2775-4296-9EB3-751EFBEC1B3C}.Release (x86)|Any CPU.ActiveCfg = Release (x86)|Any CPU
+		{03CB5DE5-2775-4296-9EB3-751EFBEC1B3C}.Release (x86)|Any CPU.Build.0 = Release (x86)|Any CPU
+		{03CB5DE5-2775-4296-9EB3-751EFBEC1B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03CB5DE5-2775-4296-9EB3-751EFBEC1B3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

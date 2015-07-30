@@ -1,0 +1,785 @@
+<game>
+  <rng>AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uUmFuZG9tAwAAAAVpbmV4dAZpbmV4dHAJU2VlZEFycmF5AAAHCAgIAgAAABcAAAAJAgAAAA8CAAAAOAAAAAgAAAAAkuIwUOGXlj08Jn9x6ODSVIlb0BFy6oNx6qAPFQmXUGwLgPUEaxDVbQnc3wQuX/12+CegI8KfIgwR2iVwudQyNV4npECFGOEnhtPRUmU4nj/vVkkMvmBXKG9cBnlcrr0ckbRYSHRh0wSppV0BkveoCQ2BXEgAuoVEC2aDFAYIHyMYLDI2FH91PVvVbDAY7AkDqp9fFAjB+2s1HHUdd4WoXzdlEUsPSc44kNepQ3ZnyXdcDRBQu8xWXS1+cytpUy0goxbmPZWkvwI3hNxC7F+0VJ9zCka8ojgRa0vmbws=</rng>
+  <start_time>7/30/2015 12:39:42 PM</start_time>
+  <state>Running</state>
+  <activeplayer>0f1baf5c-cc19-4efb-b58b-63fee422ab87</activeplayer>
+  <settings>
+    <GameSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <IdenticalStartingHands>false</IdenticalStartingHands>
+      <Constraints>
+        <Constraint>
+          <Minimum>1</Minimum>
+          <Maximum>1</Maximum>
+          <ConstraintType>CardMustUse</ConstraintType>
+          <ConstraintValue xsi:type="xsd:string">Outpost</ConstraintValue>
+        </Constraint>
+      </Constraints>
+      <ColonyPlatinumUsage>NotUsed</ColonyPlatinumUsage>
+      <ShelterUsage>NotUsed</ShelterUsage>
+      <CardSettings>
+        <CardsSettings>
+          <Name>Young Witch</Name>
+          <CardSettingCollection>
+            <CardSetting xsi:type="YoungWitch_UseGameConstraints">
+              <Value xsi:type="xsd:boolean">false</Value>
+            </CardSetting>
+            <CardSetting xsi:type="YoungWitch_Constraints">
+              <Value xsi:type="ArrayOfConstraint" />
+            </CardSetting>
+          </CardSettingCollection>
+        </CardsSettings>
+      </CardSettings>
+      <RandomAI_Unique>false</RandomAI_Unique>
+      <RandomAI_AllowedAIs />
+    </GameSettings>
+  </settings>
+  <table>
+    <supplies>
+      <supply>
+        <type>DominionBase.Cards.Universal.Copper</type>
+        <starting_stack_size>60</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+          <card type="DominionBase.Cards.Universal.Copper" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Universal.Copper</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Universal.Silver</type>
+        <starting_stack_size>40</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+          <card type="DominionBase.Cards.Universal.Silver" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Universal.Silver</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Universal.Gold</type>
+        <starting_stack_size>30</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+          <card type="DominionBase.Cards.Universal.Gold" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Universal.Gold</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Universal.Estate</type>
+        <starting_stack_size>14</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Universal.Estate" />
+          <card type="DominionBase.Cards.Universal.Estate" />
+          <card type="DominionBase.Cards.Universal.Estate" />
+          <card type="DominionBase.Cards.Universal.Estate" />
+          <card type="DominionBase.Cards.Universal.Estate" />
+          <card type="DominionBase.Cards.Universal.Estate" />
+          <card type="DominionBase.Cards.Universal.Estate" />
+          <card type="DominionBase.Cards.Universal.Estate" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Universal.Estate</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Universal.Duchy</type>
+        <starting_stack_size>8</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Universal.Duchy" />
+          <card type="DominionBase.Cards.Universal.Duchy" />
+          <card type="DominionBase.Cards.Universal.Duchy" />
+          <card type="DominionBase.Cards.Universal.Duchy" />
+          <card type="DominionBase.Cards.Universal.Duchy" />
+          <card type="DominionBase.Cards.Universal.Duchy" />
+          <card type="DominionBase.Cards.Universal.Duchy" />
+          <card type="DominionBase.Cards.Universal.Duchy" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Universal.Duchy</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Universal.Province</type>
+        <starting_stack_size>8</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Universal.Province" />
+          <card type="DominionBase.Cards.Universal.Province" />
+          <card type="DominionBase.Cards.Universal.Province" />
+          <card type="DominionBase.Cards.Universal.Province" />
+          <card type="DominionBase.Cards.Universal.Province" />
+          <card type="DominionBase.Cards.Universal.Province" />
+          <card type="DominionBase.Cards.Universal.Province" />
+          <card type="DominionBase.Cards.Universal.Province" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Universal.Province</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Universal.Curse</type>
+        <starting_stack_size>10</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Universal.Curse" />
+          <card type="DominionBase.Cards.Universal.Curse" />
+          <card type="DominionBase.Cards.Universal.Curse" />
+          <card type="DominionBase.Cards.Universal.Curse" />
+          <card type="DominionBase.Cards.Universal.Curse" />
+          <card type="DominionBase.Cards.Universal.Curse" />
+          <card type="DominionBase.Cards.Universal.Curse" />
+          <card type="DominionBase.Cards.Universal.Curse" />
+          <card type="DominionBase.Cards.Universal.Curse" />
+          <card type="DominionBase.Cards.Universal.Curse" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Universal.Curse</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Seaside.Outpost</type>
+        <starting_stack_size>10</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Seaside.Outpost" />
+          <card type="DominionBase.Cards.Seaside.Outpost" />
+          <card type="DominionBase.Cards.Seaside.Outpost" />
+          <card type="DominionBase.Cards.Seaside.Outpost" />
+          <card type="DominionBase.Cards.Seaside.Outpost" />
+          <card type="DominionBase.Cards.Seaside.Outpost" />
+          <card type="DominionBase.Cards.Seaside.Outpost" />
+          <card type="DominionBase.Cards.Seaside.Outpost" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Seaside.Outpost</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Hinterlands.Develop</type>
+        <starting_stack_size>10</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Hinterlands.Develop" />
+          <card type="DominionBase.Cards.Hinterlands.Develop" />
+          <card type="DominionBase.Cards.Hinterlands.Develop" />
+          <card type="DominionBase.Cards.Hinterlands.Develop" />
+          <card type="DominionBase.Cards.Hinterlands.Develop" />
+          <card type="DominionBase.Cards.Hinterlands.Develop" />
+          <card type="DominionBase.Cards.Hinterlands.Develop" />
+          <card type="DominionBase.Cards.Hinterlands.Develop" />
+          <card type="DominionBase.Cards.Hinterlands.Develop" />
+          <card type="DominionBase.Cards.Hinterlands.Develop" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Hinterlands.Develop</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Alchemy.ScryingPool</type>
+        <starting_stack_size>10</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Alchemy.ScryingPool" />
+          <card type="DominionBase.Cards.Alchemy.ScryingPool" />
+          <card type="DominionBase.Cards.Alchemy.ScryingPool" />
+          <card type="DominionBase.Cards.Alchemy.ScryingPool" />
+          <card type="DominionBase.Cards.Alchemy.ScryingPool" />
+          <card type="DominionBase.Cards.Alchemy.ScryingPool" />
+          <card type="DominionBase.Cards.Alchemy.ScryingPool" />
+          <card type="DominionBase.Cards.Alchemy.ScryingPool" />
+          <card type="DominionBase.Cards.Alchemy.ScryingPool" />
+          <card type="DominionBase.Cards.Alchemy.ScryingPool" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Alchemy.ScryingPool</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Intrigue.Conspirator</type>
+        <starting_stack_size>10</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Intrigue.Conspirator" />
+          <card type="DominionBase.Cards.Intrigue.Conspirator" />
+          <card type="DominionBase.Cards.Intrigue.Conspirator" />
+          <card type="DominionBase.Cards.Intrigue.Conspirator" />
+          <card type="DominionBase.Cards.Intrigue.Conspirator" />
+          <card type="DominionBase.Cards.Intrigue.Conspirator" />
+          <card type="DominionBase.Cards.Intrigue.Conspirator" />
+          <card type="DominionBase.Cards.Intrigue.Conspirator" />
+          <card type="DominionBase.Cards.Intrigue.Conspirator" />
+          <card type="DominionBase.Cards.Intrigue.Conspirator" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Intrigue.Conspirator</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Hinterlands.BorderVillage</type>
+        <starting_stack_size>10</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Hinterlands.BorderVillage" />
+          <card type="DominionBase.Cards.Hinterlands.BorderVillage" />
+          <card type="DominionBase.Cards.Hinterlands.BorderVillage" />
+          <card type="DominionBase.Cards.Hinterlands.BorderVillage" />
+          <card type="DominionBase.Cards.Hinterlands.BorderVillage" />
+          <card type="DominionBase.Cards.Hinterlands.BorderVillage" />
+          <card type="DominionBase.Cards.Hinterlands.BorderVillage" />
+          <card type="DominionBase.Cards.Hinterlands.BorderVillage" />
+          <card type="DominionBase.Cards.Hinterlands.BorderVillage" />
+          <card type="DominionBase.Cards.Hinterlands.BorderVillage" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Hinterlands.BorderVillage</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.DarkAges.Vagrant</type>
+        <starting_stack_size>10</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.DarkAges.Vagrant" />
+          <card type="DominionBase.Cards.DarkAges.Vagrant" />
+          <card type="DominionBase.Cards.DarkAges.Vagrant" />
+          <card type="DominionBase.Cards.DarkAges.Vagrant" />
+          <card type="DominionBase.Cards.DarkAges.Vagrant" />
+          <card type="DominionBase.Cards.DarkAges.Vagrant" />
+          <card type="DominionBase.Cards.DarkAges.Vagrant" />
+          <card type="DominionBase.Cards.DarkAges.Vagrant" />
+          <card type="DominionBase.Cards.DarkAges.Vagrant" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.DarkAges.Vagrant</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Guilds.Plaza</type>
+        <starting_stack_size>10</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Guilds.Plaza" />
+          <card type="DominionBase.Cards.Guilds.Plaza" />
+          <card type="DominionBase.Cards.Guilds.Plaza" />
+          <card type="DominionBase.Cards.Guilds.Plaza" />
+          <card type="DominionBase.Cards.Guilds.Plaza" />
+          <card type="DominionBase.Cards.Guilds.Plaza" />
+          <card type="DominionBase.Cards.Guilds.Plaza" />
+          <card type="DominionBase.Cards.Guilds.Plaza" />
+          <card type="DominionBase.Cards.Guilds.Plaza" />
+          <card type="DominionBase.Cards.Guilds.Plaza" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Guilds.Plaza</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Base.Market</type>
+        <starting_stack_size>10</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Base.Market" />
+          <card type="DominionBase.Cards.Base.Market" />
+          <card type="DominionBase.Cards.Base.Market" />
+          <card type="DominionBase.Cards.Base.Market" />
+          <card type="DominionBase.Cards.Base.Market" />
+          <card type="DominionBase.Cards.Base.Market" />
+          <card type="DominionBase.Cards.Base.Market" />
+          <card type="DominionBase.Cards.Base.Market" />
+          <card type="DominionBase.Cards.Base.Market" />
+          <card type="DominionBase.Cards.Base.Market" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Base.Market</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.DarkAges.Knights</type>
+        <starting_stack_size>10</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.DarkAges.SirBailey" />
+          <card type="DominionBase.Cards.DarkAges.SirMartin" />
+          <card type="DominionBase.Cards.DarkAges.SirMichael" />
+          <card type="DominionBase.Cards.DarkAges.DameJosephine" />
+          <card type="DominionBase.Cards.DarkAges.DameNatalie" />
+          <card type="DominionBase.Cards.DarkAges.SirDestry" />
+          <card type="DominionBase.Cards.DarkAges.SirVander" />
+          <card type="DominionBase.Cards.DarkAges.DameMolly" />
+          <card type="DominionBase.Cards.DarkAges.DameAnna" />
+          <card type="DominionBase.Cards.DarkAges.DameSylvia" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.DarkAges.SirBailey</type>
+          <type>DominionBase.Cards.DarkAges.SirMartin</type>
+          <type>DominionBase.Cards.DarkAges.SirMichael</type>
+          <type>DominionBase.Cards.DarkAges.DameJosephine</type>
+          <type>DominionBase.Cards.DarkAges.DameNatalie</type>
+          <type>DominionBase.Cards.DarkAges.SirDestry</type>
+          <type>DominionBase.Cards.DarkAges.SirVander</type>
+          <type>DominionBase.Cards.DarkAges.DameMolly</type>
+          <type>DominionBase.Cards.DarkAges.DameAnna</type>
+          <type>DominionBase.Cards.DarkAges.DameSylvia</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Prosperity.Mountebank</type>
+        <starting_stack_size>10</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Prosperity.Mountebank" />
+          <card type="DominionBase.Cards.Prosperity.Mountebank" />
+          <card type="DominionBase.Cards.Prosperity.Mountebank" />
+          <card type="DominionBase.Cards.Prosperity.Mountebank" />
+          <card type="DominionBase.Cards.Prosperity.Mountebank" />
+          <card type="DominionBase.Cards.Prosperity.Mountebank" />
+          <card type="DominionBase.Cards.Prosperity.Mountebank" />
+          <card type="DominionBase.Cards.Prosperity.Mountebank" />
+          <card type="DominionBase.Cards.Prosperity.Mountebank" />
+          <card type="DominionBase.Cards.Prosperity.Mountebank" />
+        </cards>
+        <types>
+          <type>DominionBase.Cards.Prosperity.Mountebank</type>
+        </types>
+        <tokens />
+      </supply>
+      <supply>
+        <type>DominionBase.Cards.Alchemy.Potion</type>
+        <starting_stack_size>0</starting_stack_size>
+        <visibility>Top</visibility>
+        <cards>
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+          <card type="DominionBase.Cards.Alchemy.Potion" />
+        </cards>
+        <types />
+        <tokens />
+      </supply>
+    </supplies>
+    <specials />
+    <tokenpiles />
+    <trash>
+      <cards />
+    </trash>
+  </table>
+  <players>
+    <player>
+      <name>Magen</name>
+      <uniqueid>34687d8e-8f29-4ad5-95bc-54327dac0f62</uniqueid>
+      <playertype>Human</playertype>
+      <type>DominionBase.Players.Human</type>
+      <phase>Waiting</phase>
+      <mode>Waiting</mode>
+      <actions>0</actions>
+      <buys>0</buys>
+      <currency>&lt;b&gt;0&lt;/b&gt;&lt;coin/&gt;</currency>
+      <hand>
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Estate" />
+      </hand>
+      <deck>
+        <card type="DominionBase.Cards.Universal.Estate" />
+        <card type="DominionBase.Cards.Universal.Estate" />
+      </deck>
+      <discard>
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Silver" />
+        <card type="DominionBase.Cards.Universal.Silver" />
+        <card type="DominionBase.Cards.Seaside.Outpost" />
+      </discard>
+      <inplay />
+      <setaside />
+      <revealed />
+      <private />
+      <cardmats />
+      <tokenpiles />
+    </player>
+    <player>
+      <name>Micah</name>
+      <uniqueid>0f1baf5c-cc19-4efb-b58b-63fee422ab87</uniqueid>
+      <playertype>Human</playertype>
+      <type>DominionBase.Players.Human</type>
+      <phase>Starting</phase>
+      <mode>Normal</mode>
+      <actions>1</actions>
+      <buys>1</buys>
+      <currency>&lt;b&gt;0&lt;/b&gt;&lt;coin/&gt;</currency>
+      <hand>
+        <card type="DominionBase.Cards.Seaside.Outpost" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Estate" />
+        <card type="DominionBase.Cards.Universal.Estate" />
+      </hand>
+      <deck>
+        <card type="DominionBase.Cards.DarkAges.Vagrant" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Estate" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+      </deck>
+      <discard />
+      <inplay />
+      <setaside />
+      <revealed />
+      <private />
+      <cardmats />
+      <tokenpiles />
+    </player>
+  </players>
+  <turns>
+    <turn>
+      <cardsbought>
+        <card type="DominionBase.Cards.Universal.Silver" />
+      </cardsbought>
+      <cardsgained>
+        <card type="DominionBase.Cards.Universal.Silver" />
+      </cardsgained>
+      <cardsgainedafter />
+      <cardspassed />
+      <cardspassedafter />
+      <cardsplayed>
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+      </cardsplayed>
+      <cardsreceived />
+      <cardsreceivedafter />
+      <cardsresolved>
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+      </cardsresolved>
+      <cardstrashed />
+      <cardstrashedafter />
+      <grantedby>
+      </grantedby>
+      <isturnfinished>True</isturnfinished>
+      <modifiedturn>False</modifiedturn>
+      <nextgrantedby>
+      </nextgrantedby>
+      <nextplayer>
+      </nextplayer>
+      <player>34687d8e-8f29-4ad5-95bc-54327dac0f62</player>
+    </turn>
+    <turn>
+      <cardsbought>
+        <card type="DominionBase.Cards.Seaside.Outpost" />
+      </cardsbought>
+      <cardsgained>
+        <card type="DominionBase.Cards.Seaside.Outpost" />
+      </cardsgained>
+      <cardsgainedafter />
+      <cardspassed />
+      <cardspassedafter />
+      <cardsplayed>
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+      </cardsplayed>
+      <cardsreceived />
+      <cardsreceivedafter />
+      <cardsresolved>
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+      </cardsresolved>
+      <cardstrashed />
+      <cardstrashedafter />
+      <grantedby>
+      </grantedby>
+      <isturnfinished>True</isturnfinished>
+      <modifiedturn>False</modifiedturn>
+      <nextgrantedby>
+      </nextgrantedby>
+      <nextplayer>
+      </nextplayer>
+      <player>0f1baf5c-cc19-4efb-b58b-63fee422ab87</player>
+    </turn>
+    <turn>
+      <cardsbought>
+        <card type="DominionBase.Cards.Universal.Silver" />
+      </cardsbought>
+      <cardsgained>
+        <card type="DominionBase.Cards.Universal.Silver" />
+      </cardsgained>
+      <cardsgainedafter />
+      <cardspassed />
+      <cardspassedafter />
+      <cardsplayed>
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+      </cardsplayed>
+      <cardsreceived />
+      <cardsreceivedafter />
+      <cardsresolved>
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+      </cardsresolved>
+      <cardstrashed />
+      <cardstrashedafter />
+      <grantedby>
+      </grantedby>
+      <isturnfinished>True</isturnfinished>
+      <modifiedturn>False</modifiedturn>
+      <nextgrantedby>
+      </nextgrantedby>
+      <nextplayer>
+      </nextplayer>
+      <player>34687d8e-8f29-4ad5-95bc-54327dac0f62</player>
+    </turn>
+    <turn>
+      <cardsbought>
+        <card type="DominionBase.Cards.DarkAges.Vagrant" />
+      </cardsbought>
+      <cardsgained>
+        <card type="DominionBase.Cards.DarkAges.Vagrant" />
+      </cardsgained>
+      <cardsgainedafter />
+      <cardspassed />
+      <cardspassedafter />
+      <cardsplayed>
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+      </cardsplayed>
+      <cardsreceived />
+      <cardsreceivedafter />
+      <cardsresolved>
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+      </cardsresolved>
+      <cardstrashed />
+      <cardstrashedafter />
+      <grantedby>
+      </grantedby>
+      <isturnfinished>True</isturnfinished>
+      <modifiedturn>False</modifiedturn>
+      <nextgrantedby>
+      </nextgrantedby>
+      <nextplayer>
+      </nextplayer>
+      <player>0f1baf5c-cc19-4efb-b58b-63fee422ab87</player>
+    </turn>
+    <turn>
+      <cardsbought>
+        <card type="DominionBase.Cards.Seaside.Outpost" />
+      </cardsbought>
+      <cardsgained>
+        <card type="DominionBase.Cards.Seaside.Outpost" />
+      </cardsgained>
+      <cardsgainedafter />
+      <cardspassed />
+      <cardspassedafter />
+      <cardsplayed>
+        <card type="DominionBase.Cards.Universal.Silver" />
+        <card type="DominionBase.Cards.Universal.Silver" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+      </cardsplayed>
+      <cardsreceived />
+      <cardsreceivedafter />
+      <cardsresolved>
+        <card type="DominionBase.Cards.Universal.Silver" />
+        <card type="DominionBase.Cards.Universal.Silver" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+        <card type="DominionBase.Cards.Universal.Copper" />
+      </cardsresolved>
+      <cardstrashed />
+      <cardstrashedafter />
+      <grantedby>
+      </grantedby>
+      <isturnfinished>True</isturnfinished>
+      <modifiedturn>False</modifiedturn>
+      <nextgrantedby>
+      </nextgrantedby>
+      <nextplayer>
+      </nextplayer>
+      <player>34687d8e-8f29-4ad5-95bc-54327dac0f62</player>
+    </turn>
+    <turn>
+      <cardsbought />
+      <cardsgained />
+      <cardsgainedafter />
+      <cardspassed />
+      <cardspassedafter />
+      <cardsplayed />
+      <cardsreceived />
+      <cardsreceivedafter />
+      <cardsresolved />
+      <cardstrashed />
+      <cardstrashedafter />
+      <grantedby>
+      </grantedby>
+      <isturnfinished>False</isturnfinished>
+      <modifiedturn>False</modifiedturn>
+      <nextgrantedby>
+      </nextgrantedby>
+      <nextplayer>
+      </nextplayer>
+      <player>0f1baf5c-cc19-4efb-b58b-63fee422ab87</player>
+    </turn>
+  </turns>
+</game>

@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Dominion.NET_WPF.Controls.ucCardConstraints"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dominion.NET_WPF"
+             xmlns:ctrl="clr-namespace:Dominion.NET_WPF.Controls"
+             mc:Ignorable="d" Name="That"
+             d:DesignHeight="50" d:DesignWidth="300">
+    <StackPanel>
+        <StackPanel Name="spConstraints" ctrl:ucCardConstraint.RemoveClick="spConstraints_RemoveClick">
+            <ItemsControl Name="icConstraints" />
+        </StackPanel>
+        <ctrl:ucButton x:Name="bAddNew" Text="Add new constraint" HorizontalAlignment="Left" Margin="4" TextPadding="2" Click="bAddNew_Click" TabIndex="350" />
+    </StackPanel>
+</UserControl>
