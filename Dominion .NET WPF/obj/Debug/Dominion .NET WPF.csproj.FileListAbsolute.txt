@@ -77,3 +77,82 @@ C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Dominion.NET_WPF.Properties.Re
 C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Dominion .NET WPF.csproj.GenerateResource.Cache
 C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Dominion .NET WPF.exe
 C:\dominion_net\trunk\Dominion .NET WPF\obj\Debug\Dominion .NET WPF.pdb
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\bin\Debug\Dominion .NET WPF.exe.config
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Dominion .NET WPF.exe
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Dominion .NET WPF.pdb
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\bin\Debug\Dominion .NET WPF.exe
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\bin\Debug\Dominion .NET WPF.pdb
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\bin\Debug\DominionBase.dll
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\bin\Debug\GongSolutions.Wpf.DragDrop.dll
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\bin\Debug\GrayscaleEffect.dll
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\bin\Debug\Ookii.Dialogs.Wpf.dll
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\bin\Debug\DominionBase.pdb
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Dominion .NET WPF.csprojResolveAssemblyReference.cache
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucToggleButton.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucButton.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucObjectList.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucPlayerOverview.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucTokenIcon.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\ToolTipCard.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\CardCollectionControl.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\CardStackControl.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucToggleButton.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucButton.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucCardConstraint.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucCardConstraints.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucCardIcon.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucCardSettings.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucICardCheckBox.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucICardIcon.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\GameLog\ucGameMessage.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\GameLog\ucGameTurn.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\GameLog\ucPlayerTurn.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucChooser.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucGameLog.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucICardButton.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucKineticScroller.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucObjectList.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucPlayerDisplay.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucPlayerOverview.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucPlayerSettings.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucSmallColorPicker.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucTokenIcon.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\SupplyControl.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\ToolTipCard.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\wCardSelection.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\wCardViewer.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\wMain.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\wMessageBox.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\wSettings.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\App.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Dominion .NET WPF_MarkupCompile.cache
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Dominion .NET WPF_MarkupCompile.lref
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\CardCollectionControl.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\CardStackControl.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucCardConstraint.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucCardConstraints.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucCardIcon.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucCardSettings.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucICardCheckBox.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucICardIcon.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\GameLog\ucGameMessage.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\GameLog\ucGameTurn.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\GameLog\ucPlayerTurn.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucChooser.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucGameLog.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucICardButton.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucKineticScroller.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucPlayerDisplay.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucPlayerSettings.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\ucSmallColorPicker.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Controls\SupplyControl.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\wCardSelection.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\wCardViewer.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\wMain.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\wMessageBox.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\wSettings.baml
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Dominion .NET WPF.g.resources
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Dominion.NET_WPF.Properties.Resources.resources
+C:\Users\mhawkinson.KALOSINC\Documents\GitHub\dominion_net_multi\Dominion .NET WPF\obj\Debug\Dominion .NET WPF.csproj.GenerateResource.Cache

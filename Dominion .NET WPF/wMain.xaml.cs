@@ -1080,6 +1080,7 @@ namespace Dominion.NET_WPF
 				{
 					dpStuff.IsEnabled = true;
 					miSaveGame.IsEnabled = true;
+                    _Player = e.Player;
 				}
 				else
 				{
@@ -2099,11 +2100,6 @@ namespace Dominion.NET_WPF
             WaitCallback wcb = new WaitCallback(UpdateDisplayTarget);
 			DominionBase.GameEndTurnMessage getm = new DominionBase.GameEndTurnMessage(wcb, game.ActivePlayer);
 			getm.Message = String.Format("{0} ending turn", game.ActivePlayer);
-
-            if( game.FigureNextPlayer().PlayerType == DominionBase.Players.PlayerType.Human )
-            {
-                _Player = game.FigureNextPlayer();
-            }
 
             EnqueueGameMessageAndWait(getm);
          }

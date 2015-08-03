@@ -265,7 +265,10 @@ namespace Dominion.NET_WPF.Controls
 			if (cardHand.Dispatcher.CheckAccess())
 			{
 				if (this.IsUIPlayer)
-					cardHand.IsClickable = true;
+                {
+                    cardHand.IsClickable = true;
+                }
+					
 				else
 					cardHand.IsClickable = false;
 			}

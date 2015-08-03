@@ -75,10 +75,10 @@ namespace Dominion.NET_WPF
 				playerSettings.ElementAt(count).PlayerSettings = this.Settings.PlayerSettings[count];
 			}
 
-			// For now, limit the number of human players to 1
-			slidHumanPlayers.Maximum = 2;
+            // human players used to be limited to 1
+            slidHumanPlayers.Maximum = slidNumPlayers.Value;
 
-			slidNumPlayers_ValueChanged(slidNumPlayers, null);
+            slidNumPlayers_ValueChanged(slidNumPlayers, null);
 			slidHumanPlayers_ValueChanged(slidHumanPlayers, null);
 
 			lbAISelection.DataContext = new ViewModel.AIListViewModel(aiTypes.Where(t => t != typeof(DominionBase.Players.AI.RandomAI)), settings.RandomAI_AllowedAIs);
@@ -154,9 +154,9 @@ namespace Dominion.NET_WPF
 					slidHumanPlayers.Value = this.Settings.NumberOfHumanPlayers;
 					slidHumanPlayers.Maximum = this.Settings.NumberOfPlayers;
 
-					// For now, limit the number of human players to 1
-					slidHumanPlayers.Maximum = 2;
-				}
+                    // human players used to be limited to 1
+                    slidHumanPlayers.Maximum = slidNumPlayers.Value;
+                }
 			}
 		}
 
